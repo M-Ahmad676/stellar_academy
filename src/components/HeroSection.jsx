@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import SplitText from "./SplitText";
+import Image from './LazyLoadingImage'
 
 export default function HeroSection() {
   return (
@@ -32,10 +33,10 @@ export default function HeroSection() {
       </div>
 
       <div className="m-8 max-w-[25rem] w-full">
-        <img
-          src="/Hero.jpg"
-          alt="heroSection"
-          className="w-full object-cover h-full"
+        <Image
+          title="HeroSection"
+          path="/Hero.jpg"
+          styling="w-full object-cover h-full"
         />
       </div>
     </div>
