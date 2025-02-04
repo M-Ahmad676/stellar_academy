@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Button from './Button'
 
 export default function Navbar() {
@@ -12,26 +12,26 @@ export default function Navbar() {
 
        <ul className='flex gap-x-16'>
         <li className='group'>
-            <Link to='/' className='relative group-hover:text-[#DC3332]'>
+            <NavLink to='/' className='relative group-hover:text-[#DC3332]'>
             Home
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
-            </Link>
+            </NavLink>
         </li>
         <li className='group'>
-            <Link to='/' className='group relative group-hover:text-[#DC3332]'>Programs
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Programs
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
-            </Link>
+            </NavLink>
             
         </li>
         <li className='group'>
-            <Link to='/' className='group relative group-hover:text-[#DC3332]'>Career
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Career
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
-            </Link>
+            </NavLink>
         </li>
         <li className='group'>
-            <Link to='/' className='group relative group-hover:text-[#DC3332]'>About
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>About
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
-            </Link>
+            </NavLink>
         </li>
        </ul>
 
