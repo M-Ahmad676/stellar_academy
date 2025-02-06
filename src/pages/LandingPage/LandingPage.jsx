@@ -1,9 +1,12 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection";
 import AboutUs from "../../components/Image_textSection";
-import SplitText from "../../components/SplitText";
 import BlurText from "../../components/Blur Text/BlurText";
+import SplitText from "../../components/SplitText";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import Cards from "../../components/Cards";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import LazyLoadingImage from "../../components/LazyLoadingImage";
 
 export default function LandingPage() {
   return (
@@ -12,7 +15,7 @@ export default function LandingPage() {
         <HeroSection />
         <AboutUs />
         <div className="bg-gradient2 h-auto py-20 flex justify-center items-center">
-          <div className="max-w-screen-xl text-center">
+          <div className="w-[1350px] max-w-full mx-auto text-center">
             <BlurText
               text="Our Programs"
               delay={150}
@@ -27,27 +30,47 @@ export default function LandingPage() {
               direction="top"
               className="text-[1.1rem] mb-8 text-white"
             />
-            <Cards/>
+            <Cards />
           </div>
         </div>
-        <div className="flex justify-around items-center my-16 ">
+        <div className="w-[1350px] max-w-full mx-auto h-auto my-28 flex justify-between">
           <div className="max-w-[45%] w-full">
-          <SplitText
-          text="Why Choose Us ?"
-          className="text-red-500 text-center text-[2.5rem] font-bold"
-          delay={100}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-        />
-        <p className="leading-8 pt-5">At Stellar Education System, we are dedicated to preparing students for success in their Matric and HSSC board exams. Our expert-led courses, innovative teaching methods, and personalized approach ensure that you gain the knowledge and skills necessary to excel in your exams. With a strong focus on each student’s individual strengths, we help unlock their full potential and guide them towards academic success.</p>
+            <SplitText
+              text="Our Teaching Methodology"
+              className="text-center text-[2.3rem] font-bold"
+              delay={100}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+            />
+            <ul className="font-medium text-[1.1rem] space-y-5 py-10">
+              <li className="flex items-center">
+                <MdKeyboardDoubleArrowRight className="text-[1.5rem] text-blue-500" />
+                Concept-Based Learning
+              </li>
+
+              <li className="flex items-center">
+                <MdKeyboardDoubleArrowRight className="text-[1.5rem] text-blue-500" />
+                Weekly Assessments
+              </li>
+              <li className="flex items-center">
+                <MdKeyboardDoubleArrowRight className="text-[1.5rem] text-blue-500" />
+                Visual & Practical Learning
+              </li>
+              <li className="flex items-center">
+                <MdKeyboardDoubleArrowRight className="text-[1.5rem] text-blue-500" />
+                Doubt-Clearing Sessions
+              </li>
+            </ul>
           </div>
-          <div className="max-w-[45%] w-full">
-            <img src="/image1.jpg" alt="image2" className="w-full h-[25rem] object-cover rounded-lg" />
+
+          <div className="max-w-[45%] ">
+            <LazyLoadingImage title="teaching methodology" path="/image3.jpg" styling="w-full object-cover h-[25rem] rounded-xl" />
           </div>
         </div>
+        <WhyChooseUs />
       </div>
     </div>
   );

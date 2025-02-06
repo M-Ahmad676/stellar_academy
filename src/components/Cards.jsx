@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaChalkboardTeacher } from "react-icons/fa";
+import { PiExamFill } from "react-icons/pi";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { TiGlobe } from "react-icons/ti";
 
@@ -14,8 +14,8 @@ export default function Cards() {
     },
 
     {
-      icon: <FaChalkboardTeacher/>,
-      title:"Evening Coaching",
+      icon: <PiExamFill/>,
+      title:"Board Exam Preparation",
       body:"Make use of the best coaching classes to give yourself a shot at being among the frontrunners in board exams.",
       
     },
@@ -27,7 +27,7 @@ export default function Cards() {
     },
   ]
   return (
-    <div className='grid grid-cols-[repeat(3,_minmax(15rem,_23rem))] gap-x-10 justify-items-center py-10'>
+    <div className='grid grid-cols-[repeat(3,_minmax(15rem,_23rem))] gap-x-16 place-content-center justify-items-center py-10'>
       {cardData.map((card,index) => (
       <div key={index} className='flex flex-col items-center justify-center text-white border-2 p-5 rounded-lg cursor-pointer transition-all duration-300 hover:scale-105'>
         <span className='text-[3.2rem] py-7'>{card.icon}</span>

@@ -18,13 +18,13 @@ export default function Navbar() {
             </NavLink>
         </li>
         <li className='group'>
-            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Programs
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Courses
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
             </NavLink>
             
         </li>
         <li className='group'>
-            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Career
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Announcement
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
             </NavLink>
         </li>
@@ -33,9 +33,14 @@ export default function Navbar() {
             <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
             </NavLink>
         </li>
+        <li className='group'>
+            <NavLink to='/' className='group relative group-hover:text-[#DC3332]'>Contact
+            <span className='absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full'></span>
+            </NavLink>
+        </li>
        </ul>
 
-       <Button/>
+       <Button label="Apply Now"/>
 
     </nav>
   )

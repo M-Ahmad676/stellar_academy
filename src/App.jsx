@@ -1,6 +1,7 @@
 import './App.css'
 import LandingPage from './pages/LandingPage/LandingPage'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
       </Routes>
+      <Footer/>
      </Router>
     </>
   )

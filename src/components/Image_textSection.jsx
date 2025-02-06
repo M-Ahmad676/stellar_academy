@@ -18,7 +18,7 @@ export default function Image_textSection({}) {
 
      <div className='max-w-[45%] w-full h-full'>
        <SplitText
-          text="About Us"
+          text="About Stellar"
           className="text-center text-[2.5rem] font-bold"
           delay={100}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}

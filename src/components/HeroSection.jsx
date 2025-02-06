@@ -28,7 +28,7 @@ export default function HeroSection() {
         <h3 className="leading-7">
         Unlock your full potential with a transformative learning experience that combines expert mentorship, hands-on training, and a supportive community empowering you with the knowledge and skills to achieve your goals and thrive in the future
         </h3>
-        <button className="py-2 px-6 rounded-sm bg-red-500 text-white cursor-pointer hover:bg-red-600 transition-all duration-500">View Programs</button>
+        <button className="py-2 px-6 rounded-sm bg-red-500 text-white cursor-pointer hover:bg-red-600 transition-all duration-500">View Courses</button>
       </div>
 
       <div className="m-8 max-w-[25rem] w-full">
