@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
     <div className="w-[5rem] h-1 bg-red-500 rounded-full"></div> 
    <SplitText
      text="Why Choose Us ?"
-     className="text-center text-[2.3rem] font-bold"
+     className="text-center text-red-500 text-[2.3rem] font-bold"
      delay={100}
      animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
      animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
 
    <div className='grid grid-cols-[repeat(4,_minmax(12rem,_20rem))] justify-self-center gap-x-5 my-20'>
     {cardData.map((data,index) => (
-     <div key={index} className='flex flex-col items-center text-center gap-y-5 bg-gradient3 text-white shadow-md shadow-gray-400 py-10 px-5 rounded-2xl'>
+     <div key={index} className='flex flex-col items-center text-center gap-y-5 bg-gradient2 text-white shadow-md shadow-gray-400 py-10 px-5 rounded-2xl'>
         
         <span className='text-[2.5rem]'>{data.icon}</span>
          

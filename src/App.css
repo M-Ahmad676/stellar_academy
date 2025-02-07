@@ -34,7 +34,3 @@ background: linear-gradient(54deg, rgba(255,255,255,1) 64%, rgba(87,150,243,1) 1
   .bg-gradient2{
     background: linear-gradient(54deg, rgba(34,94,154,1) 24%, rgba(104,137,231,1) 75%);
   }
-
-  .bg-gradient3{
-    background: linear-gradient(233deg, rgb(133, 215, 101) 0%, rgba(36,117,39,1) 77%);
-  }
