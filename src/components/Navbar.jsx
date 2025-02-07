@@ -10,11 +10,11 @@ export default function Navbar() {
     },
     {
       label: "Courses",
-      path: "/",
+      path: "/Courses",
     },
     {
       label: "Announcement",
-      path: "/",
+      path: "/Announcement",
     },
     {
       label: "About Us",
@@ -22,7 +22,7 @@ export default function Navbar() {
     },
     {
       label: "Contact Us",
-      path: "/",
+      path: "/ContactUs",
     },
   ];
 
@@ -36,10 +36,10 @@ export default function Navbar() {
           <li className="group" key={index}>
             <NavLink
               to={navlink.path}
-              className="relative group-hover:text-[#DC3332]"
+              className={({isActive}) => isActive ? "text-[#DC3332] relative" : " relative group-hover:text-[#DC3332]"}
             >
               {navlink.label}
-              <span className="absolute h-1 w-0 rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0 group-hover:w-full"></span>
+              <span className={`absolute h-1 w-0 group-hover:w-full rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0`}></span>
             </NavLink>
           </li>
         ))}

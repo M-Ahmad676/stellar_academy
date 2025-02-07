@@ -27,8 +27,8 @@ export default function Image_textSection({}) {
           threshold={0.2}
           rootMargin="-50px"
         />
-        <p className='pt-5 leading-8'>Stellar Education System is a premier academy dedicated to preparing students for Matric and HSSC board exams. With expert instructors, a structured curriculum, and a personalized learning approach, we ensure students achieve academic excellence. Our commitment to quality education, innovative teaching methods, and a supportive learning environment empowers students to reach their full potential. Join us and take the next step toward success!</p>
-        <p className='leading-8 pt-4'>At Stellar Education System, we believe in nurturing confidence and critical thinking alongside academic success. Our goal is to equip students with the knowledge and skills they need to excel in their exams and beyond</p>
+        <p className='pt-5 leading-8 text-[1.05rem]'>Stellar Education System is a premier academy dedicated to preparing students for Matric and HSSC board exams. With expert instructors, a structured curriculum, and a personalized learning approach, we ensure students achieve academic excellence. Our commitment to quality education, innovative teaching methods, and a supportive learning environment empowers students to reach their full potential. Join us and take the next step toward success!</p>
+        <p className='leading-8 pt-4 text-[1.05rem]'>At Stellar Education System, we believe in nurturing confidence and critical thinking alongside academic success. Our goal is to equip students with the knowledge and skills they need to excel in their exams and beyond</p>
      </div>
     </div>
   )
