@@ -11,6 +11,7 @@ import { FaBookOpen } from "react-icons/fa6";
 import { BsFillClockFill } from "react-icons/bs";
 import LazyLoadingImage from "../../components/LazyLoadingImage";
 import Statistics from "../../components/AcademyStatistics/Statistics";
+import { Slide } from "react-awesome-reveal";
 
 export default function LandingPage() {
   const Methodology = [
@@ -37,7 +38,7 @@ export default function LandingPage() {
   ];
   return (
     <div>
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto overflow-hidden">
         <HeroSection />
         <AboutUs />
         <div className="bg-gradient2 h-auto py-20 flex justify-center items-center">
@@ -49,13 +50,8 @@ export default function LandingPage() {
               direction="top"
               className="text-[2.5rem] mb-8 font-semibold text-white"
             />
-            <BlurText
-              text="We Offer all inclusive Preparation for all major local and foreign test at our campus"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              className="text-[1.1rem] mb-8 text-white"
-            />
+           <p className="mb-8 text-[1.1rem] text-white">We Offer all inclusive Preparation for all major local and foreign test at our campus
+           </p>
             <Cards />
           </div>
         </div>
@@ -73,6 +69,7 @@ export default function LandingPage() {
           <div className="flex justify-between items-center my-7">
             <div className="max-w-[45%] w-full">
               <div className="space-y-8">
+                <Slide cascade={true} duration={1000} triggerOnce={true}>
                 {Methodology.map((data, index) => (
                   <div key={index} className="flex items-center gap-x-4 ">
                     <div className="w-[4rem] max-w-full h-[4rem] rounded-full bg-red-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
@@ -83,6 +80,7 @@ export default function LandingPage() {
                     </div>
                   </div>
                 ))}
+                </Slide>
               </div>
             </div>
 
@@ -91,6 +89,7 @@ export default function LandingPage() {
                 title="teaching methodology"
                 path="/image3.jpg"
                 styling="w-full object-cover h-[25rem] rounded-xl "
+                placeholder='/Placeholder3.jpg'
               />
             </div>
           </div>

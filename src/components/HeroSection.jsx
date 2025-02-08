@@ -1,6 +1,7 @@
 import React from "react";
 import SplitText from "./SplitText";
 import Image from './LazyLoadingImage'
+import {Fade} from 'react-awesome-reveal'
 
 export default function HeroSection() {
   return (
@@ -10,6 +11,7 @@ export default function HeroSection() {
       </div>
 
       <div className="space-y-5 max-w-[35rem] w-full">
+      <Fade direction="down" triggerOnce={true}>
         <h1 className="text-[3rem] font-bold">
           {" "}
           Unlock Your   
@@ -25,10 +27,15 @@ export default function HeroSection() {
         />
           <br />with Quality Education
         </h1>
+        </Fade>
+        <Fade direction="left" delay={1000} triggerOnce={true}>
         <h3 className="leading-7">
         Unlock your full potential with a transformative learning experience that combines expert mentorship, hands-on training, and a supportive community empowering you with the knowledge and skills to achieve your goals and thrive in the future
         </h3>
+        </Fade>
+        <Fade direction="up" delay={2000} triggerOnce={true}>
         <button className="py-2 px-6 rounded-sm bg-red-500 text-white cursor-pointer hover:bg-red-600 transition-all duration-500">View Courses</button>
+        </Fade>
       </div>
 
       <div className="m-8 max-w-[25rem] w-full">
@@ -36,6 +43,7 @@ export default function HeroSection() {
           title="HeroSection"
           path="/Hero.jpg"
           styling="w-full object-cover h-full"
+          placeholder='/placeholder.jpg'
         />
       </div>
     </div>

@@ -4,6 +4,7 @@ import { FaBook } from "react-icons/fa"
 import { FaClipboardList } from "react-icons/fa"
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaMoneyBill } from "react-icons/fa"
+import { Bounce, Zoom, Rotate } from 'react-awesome-reveal';
 
 export default function WhyChooseUs() {
 
@@ -53,8 +54,9 @@ export default function WhyChooseUs() {
    </div>
 
    <div className='grid grid-cols-[repeat(4,_minmax(12rem,_20rem))] justify-self-center gap-x-5 my-20'>
+    <Zoom  duration={1200} triggerOnce={true}>
     {cardData.map((data,index) => (
-     <div key={index} className='flex flex-col items-center text-center gap-y-5 bg-gradient2 text-white shadow-md shadow-gray-400 py-10 px-5 rounded-2xl'>
+     <div key={index} className='flex flex-col items-center w-full h-full text-center gap-y-5 bg-gradient2 text-white shadow-md shadow-gray-400 py-10 px-5 rounded-2xl'>
         
         <span className='text-[2.5rem]'>{data.icon}</span>
          
@@ -64,6 +66,7 @@ export default function WhyChooseUs() {
 
      </div>
      ))}
+     </Zoom>
    </div>
    
 
