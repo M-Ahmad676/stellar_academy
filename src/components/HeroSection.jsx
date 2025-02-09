@@ -5,12 +5,12 @@ import {Fade} from 'react-awesome-reveal'
 
 export default function HeroSection() {
   return (
-    <div className="flex justify-around relative items-center h-[100vh] px-10">
+    <div className="flex justify-around relative items-center h-[100vh] px-10 my-10 min-[1000px]:my-0">
 
       <div className="w-[20rem] h-[20rem] absolute rounded-full bg-[#e86464] -top-32 -left-20 -z-10 shadow-sm shadow-gray-400"> 
       </div>
 
-      <div className="space-y-5 max-w-[35rem] w-full">
+      <div className="space-y-5 min-[1000px]:max-w-[35rem] w-full text-center min-[1000px]:text-start ">
       <Fade direction="down" triggerOnce={true}>
         <h1 className="text-[3rem] font-bold">
           {" "}
@@ -38,7 +38,7 @@ export default function HeroSection() {
         </Fade>
       </div>
 
-      <div className="m-8 max-w-[25rem] w-full">
+      <div className="m-8 max-w-[25rem] w-full hidden min-[1000px]:block">
         <Image
           title="HeroSection"
           path="/Hero.jpg"

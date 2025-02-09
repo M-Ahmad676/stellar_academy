@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
       ]
 
   return (
-    <div className="w-[1350px] max-w-full mx-auto h-auto my-28">
+    <div className="w-[1450px] max-w-full mx-auto h-auto my-28 px-10">
     <div className="flex justify-center items-center gap-x-4">  
     <div className="w-[5rem] h-1 bg-black rounded-full"></div> 
    <SplitText
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
    <div className="w-[5rem] h-1 bg-black rounded-full"></div> 
    </div>
 
-   <div className='grid grid-cols-[repeat(4,_minmax(12rem,_20rem))] justify-self-center gap-x-5 my-20'>
+   <div className='grid grid-cols-1 md:grid-cols-2 gap-y-5 xl:grid-cols-[repeat(4,_minmax(12rem,_20rem))] justify-self-center gap-x-5 my-20'>
     <Zoom  duration={1200} triggerOnce={true}>
     {cardData.map((data,index) => (
      <div key={index} className='flex flex-col items-center w-full h-full text-center gap-y-5 bg-gradient2 text-white shadow-md shadow-gray-400 py-10 px-5 rounded-2xl'>

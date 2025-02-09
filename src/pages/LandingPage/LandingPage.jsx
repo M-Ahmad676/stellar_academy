@@ -42,7 +42,7 @@ export default function LandingPage() {
         <HeroSection />
         <AboutUs />
         <div className="bg-gradient2 h-auto py-20 flex justify-center items-center">
-          <div className="w-[1350px] max-w-full mx-auto text-center">
+          <div className="w-[1350px] max-w-full mx-auto text-center px-10">
             <BlurText
               text="Our Programs"
               delay={150}
@@ -55,7 +55,7 @@ export default function LandingPage() {
             <Cards />
           </div>
         </div>
-        <div className="w-[1350px] max-w-full mx-auto h-auto my-28">
+        <div className="w-[1450px] max-w-full mx-auto h-auto my-24 px-10">
           <SplitText
             text="Our Teaching Methodology"
             className="text-center text-[2.3rem] font-bold"
@@ -66,29 +66,28 @@ export default function LandingPage() {
             threshold={0.2}
             rootMargin="-50px"
           />
-          <div className="flex justify-between items-center my-7">
-            <div className="max-w-[45%] w-full">
-              <div className="space-y-8">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-y-20 mt-14">
+            <div className="lg:max-w-[50%] w-full space-y-8">
                 <Slide cascade={true} duration={1000} triggerOnce={true}>
                 {Methodology.map((data, index) => (
-                  <div key={index} className="flex items-center gap-x-4 ">
-                    <div className="w-[4rem] max-w-full h-[4rem] rounded-full bg-red-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
-                      <span className="text-[1.5rem]">{data.icon}</span>
+                  <div key={index} className="flex items-center gap-x-4 w-full">
+                    <div className="w-[6rem] lg:w-[4rem] flex-shrink-0 h-[6rem] lg:h-[4rem] rounded-full bg-red-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
+                      <span className="text-[2rem] lg:text-[1.5rem]">{data.icon}</span>
                     </div>
-                    <div className="w-[80%] max-w-full shadow-md shadow-gray-400 rounded-md p-5">
-                      <h3 className="text-[1rem] font-medium">{data.title}</h3>
+                    <div className="flex-grow space-y-3 lg:space-y-0 max-w-full shadow-md shadow-gray-400 rounded-md p-5">
+                      <h3 className="text-[1.08rem] font-medium">{data.title}</h3>
+                      <p className="block lg:hidden">{data.body}</p>
                     </div>
                   </div>
                 ))}
                 </Slide>
-              </div>
             </div>
 
-            <div className="max-w-[45%]">
+            <div className=" hidden lg:block lg:max-w-[45%]">
               <LazyLoadingImage
                 title="teaching methodology"
                 path="/image3.jpg"
-                styling="w-full object-cover h-[25rem] rounded-xl "
+                styling="w-full object-cover rounded-xl "
                 placeholder='/Placeholder3.jpg'
               />
             </div>
