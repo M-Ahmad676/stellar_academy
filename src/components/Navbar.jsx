@@ -31,11 +31,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full fixed flex justify-between px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-10">
+    <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-10">
 
-        <FiMenu className="block min-[1000px]:hidden text-[2rem]"/>
+        <FiMenu className="block min-[1000px]:hidden text-[1.8rem] sm:text-[2rem]"/>
 
-      <div className="max-w-[5rem] ml-16 min-[1000px]:pl-0">
+      <div className="max-w-[4rem] sm:max-w-[5rem] ml-16 min-[1000px]:pl-0">
         <img src="/Logo.png" alt="Stellar Academy" className="w-full" />
       </div>
       <ul className="hidden min-[1000px]:flex gap-x-16">

@@ -42,20 +42,20 @@ export default function LandingPage() {
         <HeroSection />
         <AboutUs />
         <div className="bg-gradient2 h-auto py-20 flex justify-center items-center">
-          <div className="w-[1350px] max-w-full mx-auto text-center px-10">
+          <div className="w-[1350px] max-w-full mx-auto text-center px-4 sm:px-10">
             <BlurText
               text="Our Programs"
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-[2.5rem] mb-8 font-semibold text-white"
+              className="text-[2.3rem] sm:text-[2.5rem] mb-8 font-semibold text-white"
             />
-           <p className="mb-8 text-[1.1rem] text-white">We Offer all inclusive Preparation for all major local and foreign test at our campus
+           <p className="mb-8 text-base sm:text-[1.1rem] text-white">We Offer all inclusive Preparation for all major local and foreign test at our campus
            </p>
             <Cards />
           </div>
         </div>
-        <div className="w-[1450px] max-w-full mx-auto h-auto my-24 px-10">
+        <div className="w-[1450px] max-w-full mx-auto h-auto my-24 px-4 sm:px-10">
           <SplitText
             text="Our Teaching Methodology"
             className="text-center text-[2.3rem] font-bold"
@@ -68,13 +68,13 @@ export default function LandingPage() {
           />
           <div className="flex flex-col lg:flex-row justify-between items-start gap-y-20 mt-14">
             <div className="lg:max-w-[50%] w-full space-y-8">
-                <Slide cascade={true} duration={1000} triggerOnce={true}>
+                <Slide cascade={true} triggerOnce={true}>
                 {Methodology.map((data, index) => (
-                  <div key={index} className="flex items-center gap-x-4 w-full">
+                  <div key={index} className="flex flex-col sm:flex-row items-center gap-x-4 w-full">
                     <div className="w-[6rem] lg:w-[4rem] flex-shrink-0 h-[6rem] lg:h-[4rem] rounded-full bg-red-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
                       <span className="text-[2rem] lg:text-[1.5rem]">{data.icon}</span>
                     </div>
-                    <div className="flex-grow space-y-3 lg:space-y-0 max-w-full shadow-md shadow-gray-400 rounded-md p-5">
+                    <div className="flex-grow space-y-3 text-center sm:text-start lg:space-y-0 max-w-full shadow-md shadow-gray-400 rounded-md p-5">
                       <h3 className="text-[1.08rem] font-medium">{data.title}</h3>
                       <p className="block lg:hidden">{data.body}</p>
                     </div>
