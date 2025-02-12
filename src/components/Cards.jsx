@@ -31,7 +31,7 @@ export default function Cards() {
     <div className='grid grid-cols-1 md:grid-cols-2 gap-y-5 lg:grid-cols-[repeat(3,_minmax(15rem,_23rem))] gap-x-16 place-content-center justify-items-center py-10'>
      <Fade cascade direction='up' triggerOnce={true}>
       {cardData.map((card,index) => (
-      <div key={index} className='flex flex-col items-center justify-center text-white border-2 p-5 w-full h-full rounded-lg cursor-pointer transition-all duration-300 hover:scale-105'>
+      <div key={index} className='flex flex-col items-center justify-center bg-white p-5 w-full h-full rounded-lg cursor-pointer transition-all duration-300 hover:scale-105'>
         <span className='text-[3.2rem] py-7'>{card.icon}</span>
         <h4 className='text-[1.5rem] font-medium pb-2'>{card.title}</h4>
         <p>{card.body}</p>

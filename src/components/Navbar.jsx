@@ -63,10 +63,10 @@ export default function Navbar() {
           <li className="group text-[0.9rem] font-normal text-gray-600 " key={index}>
             <Link
               to={navlink.path}
-              className={ location.pathname === navlink.path ? "text-[#DC3332] relative" : " relative group-hover:text-[#DC3332]"}
+              className={ location.pathname === navlink.path ? "text-[#0056D2] relative" : " relative group-hover:text-[#0056D2]"}
             >
               {navlink.label}
-              <span className={`absolute h-1 ${location.pathname === navlink.path ? 'w-full' : 'w-0 group-hover:w-full'} rounded-full transition-all duration-500 ease-in-out bg-[#DC3332] -bottom-2 left-0`}></span>
+              <span className={`absolute h-1 ${location.pathname === navlink.path ? 'w-full' : 'w-0 group-hover:w-full'} rounded-full transition-all duration-500 ease-in-out bg-[#0056D2] -bottom-2 left-0`}></span>
             </Link>
           </li>
         ))}

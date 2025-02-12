@@ -25,7 +25,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="h-auto bg-gradient2 w-full py-20 px-4 sm:px-10">
+    <div className="h-auto bg-[#202020] w-full py-20 px-4 sm:px-10">
       <div className="w-[1400px] max-w-full grid grid-cols-[1fr]  min-[550px]:grid-cols-[1fr_1fr]   gap-y-10 xl:grid-cols-[1.5fr_1fr_1fr_1fr] gap-x-10  place-content-center h-full">
         <div className="w-full xl:place-items-center">
           <img

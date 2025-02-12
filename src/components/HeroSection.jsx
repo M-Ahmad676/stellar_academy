@@ -5,9 +5,9 @@ import {Fade} from 'react-awesome-reveal'
 
 export default function HeroSection() {
   return (
-    <div className="flex justify-around relative items-center h-[100vh] px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
+    <div className="bg-[url(/.jpg)] bg-contain bg-center w-full bg-no-repeat flex justify-around relative items-center h-[100vh] px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
 
-      <div className="w-[20rem] h-[20rem] hidden sm:block absolute rounded-full bg-[#e86464] -top-32 -left-20 -z-10 shadow-sm shadow-gray-400"> 
+      <div className="w-[20rem] h-[20rem] hidden sm:block absolute rounded-full bg-[#dde9f7] -top-32 -left-20 -z-10 shadow-sm shadow-gray-400"> 
       </div>
 
       <div className="space-y-5 min-[1000px]:max-w-[35rem] w-full text-start sm:text-center min-[1000px]:!text-start">
@@ -17,7 +17,7 @@ export default function HeroSection() {
           Unlock Your   
           <SplitText
           text=" Potential"
-          className="text-red-500 "
+          className="text-[#0056D2] "
           delay={100}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
           animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -34,7 +34,7 @@ export default function HeroSection() {
         </h3>
         </Fade>
         <Fade direction="up" delay={2000} triggerOnce={true}>
-        <button className="py-2 px-6 rounded-sm bg-red-500 text-white cursor-pointer hover:bg-red-600 transition-all duration-500">View Courses</button>
+        <button className="py-2 px-6 rounded-sm bg-[#3677d1] text-white cursor-pointer hover:bg-[#0056D2] transition-all duration-500">View Courses</button>
         </Fade>
       </div>
 
