@@ -13,7 +13,7 @@ export default function Statistics() {
         },
         {
             icon: <FaUserTie/> ,
-            number: 8,
+            number: 10,
             label:"Teachers" 
         },
         {
@@ -23,8 +23,8 @@ export default function Statistics() {
         },
         {
             icon: <FaUserAlt/> ,
-            number: 1,
-            label:"Asad Ejaz" 
+            number: 20,
+            label:"Position holders" 
         },
     ]
 
