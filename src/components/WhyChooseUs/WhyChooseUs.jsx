@@ -4,7 +4,7 @@ import { FaBook } from "react-icons/fa"
 import { FaClipboardList } from "react-icons/fa"
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaMoneyBill } from "react-icons/fa"
-import { Bounce, Zoom, Rotate } from 'react-awesome-reveal';
+import { Zoom } from 'react-awesome-reveal';
 
 export default function WhyChooseUs() {
 
