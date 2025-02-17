@@ -2,8 +2,8 @@ import React from "react";
 import { TbBinocularsFilled } from "react-icons/tb";
 import { PiTarget } from "react-icons/pi";
 import ArrowList from "../../components/ArrowList/ArrowList";
-import {Fade, Zoom,Roll} from 'react-awesome-reveal'
-
+import {Fade, Zoom} from 'react-awesome-reveal'
+import LazyLoadingImage from '../../components/LazyLoadingImage'
 
 import { Link } from "react-router-dom";
 
@@ -31,24 +31,24 @@ export default function AboutUs() {
 
   const Teachers = [
     {
-      Name:"Ilyas Kashmiri",
+      Name:"Ilyas Ahmad",
       image: '/Teachers/Teacher2.PNG',
-      Subject: "Mathematics very thick"
+      Subject: "Mathematics & Statistics"
     },
     {
-      Name:"Arham Gully",
+      Name:"Arham Gul",
       image: '/Teachers/Teacher1.jpeg',
-      Subject: "Biology insanon ki"
+      Subject: "Biology & Physics"
     },
     {
-      Name:"Pomberry",
+      Name:"Tabish Khizer",
       image: '/Teachers/Teacher4.jpeg',
-      Subject: "Computer without Computer"
+      Subject: "Chemistry ka Mistry"
     },
     {
-      Name:"Guddu Bhaiya",
+      Name:"Wajahat Imran",
       image: '/Teachers/Teacher3.JPG' ,
-      Subject: "Gym with Biology"
+      Subject: "Computer Science"
     },
 
   ]
@@ -71,37 +71,39 @@ export default function AboutUs() {
         </Fade>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto px-14">
-        <div className="mt-32 grid grid-cols-[1fr_1fr] gap-x-5 justify-items-center">
-          <div className="grid grid-cols-[repeat(2,_minmax(10rem,_17rem))] gap-x-5 justify-self-start">
-            <div className="max-w-full h-[33rem]">
-              <img
-                src="/AboutImage1.jpg"
-                alt="Image1"
-                className="w-full h-full object-cover rounded-lg"
+      <div className="max-w-screen-2xl min-h-screen mx-auto px-14">
+        <div className="mt-32 flex gap-x-14 max-h-screen">
+
+          <div className="flex items-start basis-[48%] gap-x-5 w-full">
+            
+            <div className="basis-[50%] h-full w-full">
+              <LazyLoadingImage
+                path="/AboutImage1.jpg"
+                title="Image1"
+                styling="w-full h-full object-cover rounded-lg"
               />
             </div>
 
-            <div className="space-y-5">
-              <div className="w-full h-[20rem]">
-                <img
-                  src="/AboutImage3.jpg"
-                  alt="Image2"
-                  className="w-full h-full object-cover rounded-lg "
+            <div className="space-y-5 basis-[50%]">
+              <div className="w-full">
+                <LazyLoadingImage
+                  path="/AboutImage3.jpg"
+                  title="Image2"
+                  styling="w-full h-[20rem] object-cover rounded-lg "
                 />
               </div>
 
-              <div>
-                <img
-                  src="/AboutImage2.jpg"
-                  alt="Image3"
-                  className="w-full object-cover rounded-lg "
+              <div className="w-full">
+                <LazyLoadingImage
+                  path="/AboutImage2.jpg"
+                  title="Image3"
+                  styling="w-full h-full object-cover rounded-lg "
                 />
               </div>
             </div>
           </div>
 
-          <div className="bg-[#DDE9F7] w-full rounded-lg p-14 space-y-5 overflow-hidden">
+          <div className="bg-[#DDE9F7] w-full basis-[48%] rounded-lg p-14 space-y-5 overflow-hidden">
             <h4 className="font-medium text-blue-500">ABOUT STELLAR</h4>
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[2rem] font-medium">
@@ -154,10 +156,10 @@ export default function AboutUs() {
           </div>
           {/* Vision and Mission Image */}
           <div className="w-full">
-            <img
-              src="/VisionMission.jpg"
-              alt="Vision&mission"
-              className="w-full h-full object-center rounded-lg"
+            <LazyLoadingImage
+              path="/VisionMission.jpg"
+              title="Vision&mission"
+              styling="w-full h-full object-center rounded-lg"
             />
           </div>
         </div>
@@ -176,10 +178,10 @@ export default function AboutUs() {
 
            <div key={index} className="space-y-5">
             <div className="max-w-[20rem] w-full h-[20rem] justify-self-center">
-             <img src={teacher.image} alt={teacher.Name} className="w-full h-full object-cover rounded-xl" />
+             <LazyLoadingImage path={teacher.image} title={teacher.Name} styling="w-full h-full object-cover rounded-xl" />
             </div>
             <div className="h-[7rem] bg-[#DDE9F7] p-5 rounded-xl space-y-2">
-             <p className="text-[1rem] font-medium">{teacher.Name}</p>
+             <p className="text-[1rem] font-medium text-blue-500">{teacher.Name}</p>
              <h3 className="text-[1.3rem]">{teacher.Subject}</h3>
             </div>
            </div>
@@ -193,14 +195,14 @@ export default function AboutUs() {
 
         <div className="w-full bg-[#DDE9F7] rounded-xl p-10 mt-36 mb-24 relative">
           <div className="w-[15rem] h-[15rem] absolute -top-30 left-[40%] ">
-            <img src="/Teachers/HeadMaster.JPG" alt="HeadMaster" className="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
+            <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
           </div>
 
           <div className="w-full pt-28 flex flex-col items-center justify-center space-y-3">
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[1.6rem] font-semibold">Some Wise Words From our HeadMaster</h1>
             </Fade>
-            <p>Computer science Professional with the first two missing</p>
+            <p>Computer scientist</p>
             <Fade direction="up" triggerOnce={true} duration={1000}>
              <h3 className="text-[1.2rem] font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
              </Fade>

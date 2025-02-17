@@ -5,8 +5,8 @@ export default function ArrowList({ListItems}) {
   return (
     <>
       <ul className="space-y-5">
-        {ListItems.map((items) => (
-        <li className="flex items-center gap-x-2" key={items.index}>
+        {ListItems.map((items, index) => (
+        <li className="flex items-center gap-x-2" key={index}>
           <MdKeyboardDoubleArrowRight className="text-blue-500 text-[1.2rem]" />
           {items}
         </li>
