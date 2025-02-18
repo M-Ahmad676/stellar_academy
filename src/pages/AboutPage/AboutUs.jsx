@@ -57,7 +57,7 @@ export default function AboutUs() {
     <div className="min-h-screen mx-auto overflow-hidden">
       <div className="h-[40vh] py-40 w-full text-center bg-[#DDE9F7] rounded-b-[100%] space-y-5 ">
         <Fade triggerOnce={true} direction="down" duration={1000}> 
-        <h1 className="text-[2.5rem] font-semibold">About Us</h1>
+        <h1 className="text-[2.5rem] font-semibold">Get to Know Us</h1>
         </Fade>
       
         <Fade triggerOnce={true} direction="up">
