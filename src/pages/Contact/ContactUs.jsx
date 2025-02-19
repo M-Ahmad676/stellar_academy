@@ -13,19 +13,23 @@ export default function ContactUs() {
         <Fade triggerOnce={true} direction="up">
         <p className="text-sm">
           <Link to="/" className=" hover:underline">
-            {" "}
             Home
-          </Link>{" "}
-          / Contact Us
+          </Link>
+           /Contact Us
         </p>
         </Fade>
       </div>
       <div className='max-w-screen-xl mx-auto'>
+       <div className='my-36'> 
+        <h3 className='text-blue-500 font-medium'>Get in Touch with Us</h3>
+        <h1 className='text-[2rem] pt-3 font-medium'>Have questions? We’re here to help!</h1>
 
-        <h1>hello</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur eos dolorem quam deserunt dolores possimus, perferendis nemo recusandae, reiciendis impedit quos officiis maiores, quidem debitis expedita nesciunt minus illo ullam inventore sequi iure cupiditate architecto suscipit. Eaque tenetur doloremque corporis sunt! Consectetur inventore iste alias et explicabo vitae id fugiat.</p>
+        <div>
+          
+          </div> 
 
 
+        </div>
       </div>
     </div>
   )
