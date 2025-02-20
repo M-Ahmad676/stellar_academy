@@ -1,11 +1,10 @@
 import React from "react";
 import { TbBinocularsFilled } from "react-icons/tb";
 import { PiTarget } from "react-icons/pi";
+import HeroSection from "../../components/heroSection/HeroSection";
 import ArrowList from "../../components/ArrowList/ArrowList";
 import {Fade, Zoom} from 'react-awesome-reveal'
 import LazyLoadingImage from '../../components/LazyLoadingImage'
-
-import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   const aboutListItemLeft = [
@@ -43,7 +42,7 @@ export default function AboutUs() {
     {
       Name:"Tabish Khizer",
       image: '/Teachers/Teacher4.jpeg',
-      Subject: "Chemistry ka Mistry"
+      Subject: "Chemistry"
     },
     {
       Name:"Wajahat Imran",
@@ -55,22 +54,7 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen mx-auto overflow-hidden">
-      <div className="h-[40vh] py-40 w-full text-center bg-[#DDE9F7] rounded-b-[100%] space-y-5 ">
-        <Fade triggerOnce={true} direction="down" duration={1000}> 
-        <h1 className="text-[2.5rem] font-semibold">Get to Know Us</h1>
-        </Fade>
-      
-        <Fade triggerOnce={true} direction="up">
-        <p className="text-sm">
-          <Link to="/" className=" hover:underline">
-            {" "}
-            Home
-          </Link>{" "}
-          / About Us
-        </p>
-        </Fade>
-      </div>
-
+      <HeroSection title="About Us"/>
       <div className="max-w-screen-2xl min-h-screen mx-auto px-14">
         <div className="mt-32 flex gap-x-14 max-h-screen">
 
