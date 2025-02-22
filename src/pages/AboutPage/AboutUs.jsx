@@ -164,9 +164,9 @@ export default function AboutUs() {
             <div className="max-w-[20rem] w-full h-[20rem] justify-self-center">
              <LazyLoadingImage path={teacher.image} title={teacher.Name} styling="w-full h-full object-cover rounded-xl" />
             </div>
-            <div className="h-[7rem] bg-[#DDE9F7] p-5 rounded-xl space-y-2">
-             <p className="text-[1rem] font-medium text-blue-500">{teacher.Name}</p>
-             <h3 className="text-[1.3rem]">{teacher.Subject}</h3>
+            <div className="h-[7rem] py-4 rounded-xl space-y-2">
+             <p className="text-[1.25rem] font-medium text-blue-500">{teacher.Name}</p>
+             <h3 className="text-gray-600">{teacher.Subject}</h3>
             </div>
            </div>
 
