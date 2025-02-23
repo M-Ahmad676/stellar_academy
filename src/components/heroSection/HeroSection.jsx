@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function HeroSection({title}) {
   return (
     <div className="h-[40vh] mx-14 text-center mt-28 flex flex-col items-center justify-center rounded-xl gap-y-5
-    bg-[url(/header_img.jpg)] bg-cover bg-no-repeat shadow-sm shadow-gray-400
+    bg-[url(/headerimage.jpg)] bg-bottom bg-cover bg-no-repeat shadow-sm shadow-gray-400
 
     ">
     <Fade triggerOnce={true} direction="down" duration={1000}> 
@@ -16,7 +16,7 @@ export default function HeroSection({title}) {
     <p className="text-sm">
       <Link to="/" className="hover:underline">
         Home </Link>
-       / <span className='text-[#d582f3] font-medium'>{title}</span>
+       / <span className='text-orange-500 font-medium'>{title}</span>
     </p>
     </Fade>
   </div>
