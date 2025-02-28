@@ -85,9 +85,9 @@ export default function ContactUs() {
       )}
       <HeroSection title="Contact Us" />
       <div className="max-w-screen-xl mx-auto">
-        <div className="my-32">
-          <div className="flex gap-x-14 my-16 shadow-sm shadow-gray-400 rounded-xl">
-            <div className="basis-[50%] p-10">
+        <div className="my-20 sm:my-32 mx-2 sm:mx-10 xl:mx-0">
+          <div className="flex gap-x-7 2xl:gap-x-14 my-16 shadow-sm shadow-gray-400 rounded-xl">
+            <div className="basis-[100%] lg:basis-[50%] p-10">
               <h3 className="text-orange-500 font-medium">
                 Get in Touch with Us
               </h3>
@@ -155,11 +155,11 @@ export default function ContactUs() {
                 />
               </form>
             </div>
-            <div className="basis-[50%]">
+            <div className="lg:basis-[50%] hidden lg:flex items-center">
               <img
                 src="/ContactUs.png"
                 alt="contact Us"
-                className="rounded-r-xl object-cover w-full h-full"
+                className="rounded-r-xl object-cover w-full"
               />
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Model({message, CloseModal}) {
   return (
-    <div className='relative max-w-[23rem] w-full bg-white h-auto shadow-md shadow-gray-600 rounded-lg z-0 overflow-hidden'>
+    <div className='relative  max-w-[20rem] sm:max-w-[23rem]  w-full bg-white h-auto shadow-md shadow-gray-600 rounded-lg z-0 overflow-hidden'>
              <div className='w-[8rem] h-[8rem] bg-orange-100 rounded-full absolute -left-10 -top-10'>
              </div>
              { (() => {

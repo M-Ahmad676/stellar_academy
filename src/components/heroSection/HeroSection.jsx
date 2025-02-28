@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 export default function HeroSection({title}) {
   return (
-    <div className="h-[40vh] mx-14 text-center mt-28 flex flex-col items-center justify-center rounded-xl gap-y-5
+    <div className="h-[40vh] mx-2 sm:mx-14 text-center mt-28 flex flex-col items-center justify-center rounded-xl gap-y-5
     bg-[url(/headerimage.jpg)] bg-bottom bg-cover bg-no-repeat shadow-sm shadow-gray-400
 
     ">
