@@ -41,7 +41,7 @@ export default function LandingPage() {
       <div className="max-w-screen-2xl mx-auto overflow-hidden">
         <HeroSection />
         <AboutUs />
-        <div className="bg-[#F0F6FF] h-auto py-20 flex justify-center items-center">
+        <div className="bg-[#f2f5fa] h-auto py-20 flex justify-center items-center">
           <div className="w-[1350px] max-w-full mx-auto text-center px-4 sm:px-10">
             <BlurText
               text="Our Programs"
@@ -50,7 +50,7 @@ export default function LandingPage() {
               direction="top"
               className="text-[2.3rem] sm:text-[2.5rem] mb-8 font-semibold"
             />
-           <p className="mb-8 text-base sm:text-[1.1rem]">We Offer all inclusive Preparation for all major local and foreign test at our campus
+           <p className="mb-8 text-base sm:text-[1.1rem] font-medium">We Offer all inclusive Preparation for all major local and foreign test at our campus
            </p>
             <Cards />
           </div>
@@ -68,10 +68,10 @@ export default function LandingPage() {
           />
           <div className="flex flex-col lg:flex-row justify-between items-start gap-y-20 mt-14">
             <div className="lg:max-w-[50%] w-full space-y-12">
-                <Slide cascade={true} triggerOnce={true}>
+                <Slide cascade={true} triggerOnce={true} duration={1000}>
                 {Methodology.map((data, index) => (
                   <div key={index} className="flex flex-col sm:flex-row items-center gap-x-4 w-full">
-                    <div className="w-[6rem] lg:w-[4rem] flex-shrink-0 h-[6rem] lg:h-[4rem] rounded-full bg-[#0056D2] text-white shadow-md shadow-gray-400 flex items-center justify-center">
+                    <div className="w-[6rem] lg:w-[4rem] flex-shrink-0 h-[6rem] lg:h-[4rem] rounded-full bg-orange-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
                       <span className="text-[2rem] lg:text-[1.5rem]">{data.icon}</span>
                     </div>
                     <div className="flex-grow space-y-3 text-center sm:text-start lg:space-y-0 max-w-full shadow-md shadow-gray-400 rounded-md p-5">

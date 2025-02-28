@@ -26,17 +26,8 @@ body {
     }
   }
 
-  .bg-gradient{
-background: linear-gradient(54deg, rgba(255,255,255,1) 64%, rgba(87,150,243,1) 100%);
-
-  }
-
   .bg-gradient2{
     background: linear-gradient(60deg, rgba(57,120,217,1) 34%, rgba(20,81,220,1) 82%);
-  }
-
-  .bg-gradient3{
-    background: linear-gradient(60deg, rgba(217,105,40,1) 27%, rgba(213,18,18,1) 73%);
   }
 
   .lazy-load-image-background {

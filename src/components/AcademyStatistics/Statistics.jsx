@@ -31,7 +31,7 @@ export default function Statistics() {
   return (
     <div className='grid grid-cols-1 min-[400px]:grid-cols-2 gap-y-5 md:grid-cols-4 my-10 w-full justify-center gap-x-5 lg:gap-x-10'>
       {storage.map((data,index) => (  
-       <div className="flex flex-col items-center justify-between gap-y-3 w-full bg-[#F0F6FF] p-5 text-[#272727] max-w-full rounded-lg shadow-sm shadow-gray-400" key={index}>
+       <div className="flex flex-col items-center justify-between gap-y-3 w-full bg-[#f0f6ff] p-5 text-[#272727] max-w-full rounded-lg shadow-sm shadow-gray-400" key={index}>
             <span className='text-[2.5rem] lg:text-[3rem]'>{data.icon}</span>
             <CountUp
               from={0}

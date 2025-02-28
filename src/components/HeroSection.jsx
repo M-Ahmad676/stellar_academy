@@ -16,7 +16,7 @@ export default function HeroSection() {
           Unlock Your   
           <SplitText
           text=" Potential"
-          className="text-[#0056D2] "
+          className="text-orange-500"
           delay={100}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
           animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -33,7 +33,7 @@ export default function HeroSection() {
         </h3>
         </Fade>
         <Fade direction="up" delay={2000} triggerOnce={true}>
-        <button className="py-2 px-6 rounded-sm bg-[#3677d1] text-white cursor-pointer hover:bg-[#0056D2] transition-all duration-500">View Courses</button>
+        <button className="py-2 px-6 rounded-sm bg-orange-400 text-white cursor-pointer hover:bg-orange-600 transition-all duration-500">View Courses</button>
         </Fade>
       </div>
 
