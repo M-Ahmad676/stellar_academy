@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import HeroSection from '../../components/heroSection/HeroSection'
 import { useForm } from 'react-hook-form'
 import emailjs from 'emailjs-com'
-import { RxCross2 } from "react-icons/rx"
+import Model from '../../components/Model/Model'
 
 
 export default function ContactUs() {
@@ -14,7 +14,7 @@ export default function ContactUs() {
     formState: {errors}
   } = useForm()
 
-  const [messageStatus, setMessageStatus] = useState('')
+  const [messageStatus, setMessageStatus] = useState('Email sent Successfully')
   
   const [placeholder,setPlaceholder] = useState({
     
@@ -40,24 +40,25 @@ export default function ContactUs() {
        
       (response) => {
         console.log("Email sent Successfully", response)
-        setMessageStatus("Message send Successfully !")
+        setMessageStatus("Message sent Successfully !")
         reset()
       },
       (error) => {
         console.error("Error Sending Message:", error)
-        setMessageStatus("Failed to send Message")
+        setMessageStatus("Failed to send Message !")
       }
     );
   }
 
   return (
     <div className='min-h-screen overflow-hidden relative'>
+       {messageStatus && 
+      <div className='w-full h-full bg-[#18181862] absolute '>
+      </div>
+        }
       <HeroSection  title="Contact Us"/>
       {messageStatus && 
-        <div className='absolute top-[55%] left-[40%] max-w-[20rem] w-full h-[7rem] bg-[#fffefe] border-2 border-gray-400 rounded-lg flex justify-center items-center font-medium'>
-             <RxCross2 onClick={()=>{setMessageStatus('')}}/>
-            <h2 className={messageStatus.includes("Successfully") ? "text-orange-500" : "text-red-500"}>{messageStatus}</h2>            
-        </div>
+         <Model message = {messageStatus}/>
         }
       <div className='max-w-screen-xl mx-auto'>
        <div className='my-32'>
