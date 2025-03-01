@@ -55,20 +55,19 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen mx-auto overflow-hidden">
       <HeroSection title="About Us"/>
-      <div className="max-w-screen-2xl min-h-screen mx-auto px-14">
-        <div className="mt-32 flex gap-x-14 max-h-screen">
-
+      <div className="max-w-screen-2xl min-h-screen mx-auto px-3 sm:px-7 lg:px-14">
+        <div className="mt-24 sm:mt-32 flex flex-col-reverse gap-y-7 lg:flex-row gap-x-7 xl:gap-x-14 h-auto">
           <div className="flex items-start basis-[48%] gap-x-5 w-full">
             
-            <div className="basis-[50%] h-full w-full">
+            <div className="basis-[100%] min-[1400px]:basis-[50%] h-full w-full">
               <LazyLoadingImage
-                path="/AboutImage1.jpg"
+                path="/image5.jpg"
                 title="Image1"
                 styling="w-full h-full object-cover rounded-lg"
               />
             </div>
-
-            <div className="space-y-5 basis-[50%]">
+         
+            <div className="space-y-5 hidden min-[1400px]:block basis-[50%]">
               <div className="w-full">
                 <LazyLoadingImage
                   path="/AboutImage3.jpg"
@@ -77,17 +76,17 @@ export default function AboutUs() {
                 />
               </div>
 
-              <div className="w-full">
+              <div className="w-full h-full">
                 <LazyLoadingImage
                   path="/AboutImage2.jpg"
                   title="Image3"
-                  styling="w-full h-full object-cover rounded-lg "
+                  styling="w-full object-cover rounded-lg "
                 />
               </div>
             </div>
           </div>
 
-          <div className="bg-orange-100 w-full basis-[48%] rounded-lg p-14 space-y-5 overflow-hidden">
+          <div className="bg-orange-100 w-full basis-[48%] text-start sm:text-center lg:text-start rounded-lg p-7 xl:p-14 space-y-5 overflow-hidden">
             <h4 className="font-medium text-orange-500">ABOUT STELLAR</h4>
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[2rem] font-medium">
@@ -102,7 +101,7 @@ export default function AboutUs() {
             </p>
 
             <div
-              className="flex justify-center gap-x-10 pt-5
+              className="flex  flex-col gap-y-5 text-start sm:flex-row justify-around lg:justify-center gap-x-10 pt-5
             "
             >
               <ArrowList ListItems={aboutListItemLeft} />
@@ -111,10 +110,10 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="grid grid-cols-[1fr_1fr] gap-x-14 justify-items-center my-24">
+        <div className="grid grid-cols-1 gap-y-7 lg:grid-cols-[1fr_1fr] gap-x-7 xl:gap-x-14 justify-items-center my-14 sm:my-24">
           {/* Vision and Mission Text */}
           <div className="w-full justify-self-start space-y-5">
-            <div className="bg-orange-100 rounded-lg w-full py-5 px-10 space-y-4">
+            <div className="bg-orange-100 rounded-lg w-full py-5 px-5 xl:px-10 space-y-4">
               <div className="px-5 py-1 bg-white rounded-full flex items-center gap-x-3 max-w-[14rem] w-full">
                 <TbBinocularsFilled className="text-[2rem]" />
                 <Fade direction="up" triggerOnce={true} duration={1000}>
@@ -128,7 +127,7 @@ export default function AboutUs() {
                 journey.
               </p>
             </div>
-            <div className="bg-orange-100 rounded-lg w-full py-5 px-10 space-y-5">
+            <div className="bg-orange-100 rounded-lg w-full py-5 px-5 xl:px-10 space-y-5">
               <div className="px-5 py-1 bg-white rounded-full flex items-center gap-x-3 max-w-[16rem]">
                 <PiTarget className="text-[2rem]" />
                 <Fade direction="up" triggerOnce={true} duration={1000}>
@@ -143,7 +142,7 @@ export default function AboutUs() {
             <LazyLoadingImage
               path="/VisionMission.jpg"
               title="Vision&mission"
-              styling="w-full h-full object-center rounded-lg"
+              styling="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
@@ -155,7 +154,7 @@ export default function AboutUs() {
          </Fade>
          <div className="max-w-[10rem] w-full h-1.5 bg-orange-400 rounded-full mx-auto"></div>
          </div>
-         <div className="grid grid-cols-4 justify-items-center py-20">
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center py-20">
           
           <Zoom duration={2000} triggerOnce={true}>          
           {Teachers.map((teacher,index) => (
@@ -178,17 +177,17 @@ export default function AboutUs() {
         </div> 
 
         <div className="w-full bg-orange-100 rounded-xl p-10 mt-36 mb-24 relative">
-          <div className="w-[15rem] h-[15rem] absolute -top-30 left-[40%] ">
+          <div className="w-[13rem] h-[13rem] sm:w-[15rem] sm:h-[15rem] absolute -top-30 left-1/2 -translate-x-1/2">
             <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
           </div>
 
           <div className="w-full pt-28 flex flex-col items-center justify-center space-y-3">
             <Fade direction="down" triggerOnce={true} duration={1000}>
-            <h1 className="text-[1.6rem] font-semibold">Some Wise Words From our HeadMaster</h1>
+            <h1 className="text-[1.6rem] text-center font-semibold">Some Wise Words From our HeadMaster</h1>
             </Fade>
             <p>Computer scientist</p>
             <Fade direction="up" triggerOnce={true} duration={1000}>
-             <h3 className="text-[1.2rem] font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
+             <h3 className="text-[1.2rem] text-center font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
              </Fade>
           </div>
 

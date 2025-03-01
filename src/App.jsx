@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import CopyRightBar from './components/CopyRightBar/CopyRightBar'
 import ContactUs from './pages/Contact/ContactUs'
 import Courses from './pages/Courses/Courses'
+import Announcement from './pages/Announcement/Announcement'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/ContactUs' element={<ContactUs/>}/>
         <Route path='/Courses' element={<Courses/>}/>
+        <Route path='/Announcement' element={<Announcement/>}/>
       </Routes>
       <Footer/>
       <CopyRightBar/>

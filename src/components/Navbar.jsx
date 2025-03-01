@@ -32,7 +32,7 @@ export default function Navbar() {
       icon: <ImBooks/>
     },
     {
-      label: "Announcement",
+      label: "Announcements",
       path: "/Announcement",
       icon: <HiSpeakerphone/>
 
