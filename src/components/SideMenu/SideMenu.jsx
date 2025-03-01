@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SideMenu({ navbarLinks, sideMenu }) {
   return (
@@ -14,7 +15,7 @@ export default function SideMenu({ navbarLinks, sideMenu }) {
             className="mx-2 rounded-xl p-5 hover:bg-[#86c1ff2a] flex items-center gap-x-4 "
           >
             <span className="text-[1.3rem] text-gray-600">{links.icon}</span>
-            <a href="/">{links.label}</a>
+            <Link to={links.path}>{links.label}</Link>
           </li>
         ))}
       </ul>

@@ -16,7 +16,7 @@ export default function Image_textSection({}) {
         />
       </div>  
 
-     <div className='lg:basis-[47%] w-full bg-orange-100 px-10 py-10 rounded-xl overflow-hidden'>
+     <div className='lg:basis-[47%] w-full bg-orange-100 p-3 sm:p-10 rounded-xl overflow-hidden'>
       <Fade direction='up' duration={1000} triggerOnce={true} cascade={true}>
          <h4 className='text-orange-500 font-semibold'>Who We Are</h4>
          <h1 className='text-[1.7rem] font-medium pt-2'>Empowering Learners for a Brighter Tomorrow</h1>

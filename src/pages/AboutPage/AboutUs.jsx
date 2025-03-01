@@ -87,8 +87,8 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="bg-[#DDE9F7] w-full basis-[48%] rounded-lg p-14 space-y-5 overflow-hidden">
-            <h4 className="font-medium text-blue-500">ABOUT STELLAR</h4>
+          <div className="bg-orange-100 w-full basis-[48%] rounded-lg p-14 space-y-5 overflow-hidden">
+            <h4 className="font-medium text-orange-500">ABOUT STELLAR</h4>
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[2rem] font-medium">
               Shaping Bright Minds for a Brighter Future
@@ -114,7 +114,7 @@ export default function AboutUs() {
         <div className="grid grid-cols-[1fr_1fr] gap-x-14 justify-items-center my-24">
           {/* Vision and Mission Text */}
           <div className="w-full justify-self-start space-y-5">
-            <div className="bg-[#DDE9F7] rounded-lg w-full py-5 px-10 space-y-4">
+            <div className="bg-orange-100 rounded-lg w-full py-5 px-10 space-y-4">
               <div className="px-5 py-1 bg-white rounded-full flex items-center gap-x-3 max-w-[14rem] w-full">
                 <TbBinocularsFilled className="text-[2rem]" />
                 <Fade direction="up" triggerOnce={true} duration={1000}>
@@ -128,7 +128,7 @@ export default function AboutUs() {
                 journey.
               </p>
             </div>
-            <div className="bg-[#DDE9F7] rounded-lg w-full py-5 px-10 space-y-5">
+            <div className="bg-orange-100 rounded-lg w-full py-5 px-10 space-y-5">
               <div className="px-5 py-1 bg-white rounded-full flex items-center gap-x-3 max-w-[16rem]">
                 <PiTarget className="text-[2rem]" />
                 <Fade direction="up" triggerOnce={true} duration={1000}>
@@ -153,7 +153,7 @@ export default function AboutUs() {
          <Fade direction="down" triggerOnce={true} duration={1000}>
          <h1 className="text-[2rem] font-bold">Meet Our Teachers</h1>
          </Fade>
-         <div className="max-w-[10rem] w-full h-1.5 bg-blue-400 rounded-full mx-auto"></div>
+         <div className="max-w-[10rem] w-full h-1.5 bg-orange-400 rounded-full mx-auto"></div>
          </div>
          <div className="grid grid-cols-4 justify-items-center py-20">
           
@@ -177,7 +177,7 @@ export default function AboutUs() {
         
         </div> 
 
-        <div className="w-full bg-[#DDE9F7] rounded-xl p-10 mt-36 mb-24 relative">
+        <div className="w-full bg-orange-100 rounded-xl p-10 mt-36 mb-24 relative">
           <div className="w-[15rem] h-[15rem] absolute -top-30 left-[40%] ">
             <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
           </div>
