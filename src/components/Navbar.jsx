@@ -27,7 +27,7 @@ export default function Navbar() {
       icon: <IoIosHome/>
     },
     {
-      label: "Courses",
+      label: "Programs",
       path: "/Courses",
       icon: <ImBooks/>
     },
