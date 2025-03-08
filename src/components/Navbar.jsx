@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { FiMenu } from "react-icons/fi"
 import { Link, useLocation } from "react-router-dom";
 import SideMenu from "./SideMenu/SideMenu";
@@ -13,10 +14,17 @@ export default function Navbar() {
 
   const location = useLocation()
   const [sideMenu, setSideMenu] = useState(false)
+  const navigate = useNavigate()
    
   const ToggleSideMenu = () => {
       
     setSideMenu(!sideMenu)
+
+  }
+
+  const handleApplyNow = () => {
+
+    navigate('/Enrollment')
 
   }
 
@@ -71,7 +79,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <Button label="Apply Now" />
+      <Button label="Apply Now" action={handleApplyNow}/>
     </nav>
   );
 }
