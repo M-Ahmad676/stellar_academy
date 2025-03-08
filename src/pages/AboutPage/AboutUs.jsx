@@ -147,6 +147,25 @@ export default function AboutUs() {
           </div>
         </div>
 
+
+        <div className="w-full bg-orange-100 rounded-xl p-10 mt-52 mb-28 relative">
+          <div className="w-[13rem] h-[13rem] sm:w-[15rem] sm:h-[15rem] absolute -top-30 left-1/2 -translate-x-1/2">
+            <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
+          </div>
+
+          <div className="w-full pt-28 flex flex-col items-center justify-center space-y-3">
+            <Fade direction="down" triggerOnce={true} duration={1000}>
+            <h1 className="text-[1.6rem] text-center font-semibold">Some Wise Words From our HeadMaster</h1>
+            </Fade>
+            <p>Computer scientist</p>
+            <Fade direction="up" triggerOnce={true} duration={1000}>
+             <h3 className="text-[1.2rem] text-center font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
+             </Fade>
+          </div>
+
+        </div>
+
+
         <div>   
          <div className="text-center space-y-3">
          <Fade direction="down" triggerOnce={true} duration={1000}>
@@ -175,23 +194,6 @@ export default function AboutUs() {
          </div>
         
         </div> 
-
-        <div className="w-full bg-orange-100 rounded-xl p-10 mt-36 mb-24 relative">
-          <div className="w-[13rem] h-[13rem] sm:w-[15rem] sm:h-[15rem] absolute -top-30 left-1/2 -translate-x-1/2">
-            <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
-          </div>
-
-          <div className="w-full pt-28 flex flex-col items-center justify-center space-y-3">
-            <Fade direction="down" triggerOnce={true} duration={1000}>
-            <h1 className="text-[1.6rem] text-center font-semibold">Some Wise Words From our HeadMaster</h1>
-            </Fade>
-            <p>Computer scientist</p>
-            <Fade direction="up" triggerOnce={true} duration={1000}>
-             <h3 className="text-[1.2rem] text-center font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
-             </Fade>
-          </div>
-
-        </div>
 
       </div>
     </div>
