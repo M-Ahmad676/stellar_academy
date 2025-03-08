@@ -13,7 +13,7 @@ export default function Announcement() {
    const fetchannouncements = async () => {
      
      const SHEET_ID = "1NfTq_P1t7FWqfFAuXXn19nFl73oGuJtoT-G2h7B7kgM"
-     const API_KEY = "AIzaSyAFNAomnRzV7WBi6PwB4pWVSI5UJoJd_qE"
+     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
      const RANGE = "A2:D"
      
      
@@ -44,7 +44,7 @@ export default function Announcement() {
   return (
     <div className='min-h-screen overflow-hidden'>
 
-    <HeroSection title="Application Form"/>
+    <HeroSection title="Announcements"/>
 
     <div className='max-w-screen-xl mx-auto my-20'>
      {announcements.map((announcement,index) => ( 
