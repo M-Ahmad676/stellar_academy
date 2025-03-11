@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSection from "../../components/heroSection/HeroSection";
 import ArrowList from "../../components/ArrowList/ArrowList";
+import LazyloadingImage from '../../components/LazyLoadingImage'
 import { useForm } from "react-hook-form";
+import LazyLoadingImage from "../../components/LazyLoadingImage";
 
 export default function Enrollment() {
   const Instructions = [
@@ -11,6 +13,16 @@ export default function Enrollment() {
     "Make sure your provided information is accurate to avoid any issues in the admission process.",
     "For any queries, contact us via stellar@gmail.com",
   ];
+
+  const [placeholder, setPlaceHolder] = useState({
+     
+    fullName: "Full Name",
+    DOB: "Date of Birth", 
+    email: "Email",
+    whatsAppNo: 'WhatsApp Number',
+    Grade: "Grade",
+    Subjects: "Enter Subjects"
+  })
 
   const {
     register,
@@ -33,16 +45,15 @@ export default function Enrollment() {
           </div>
         </div>
        
-       <div className="border-2 my-12">          
-          <div>
-
-
-          </div>
-
-         <form>
+       <div className="border-2 my-12 rounded-xl flex justify-between">            
+          <div className="basis-[48%] p-10">
+            <h3 className="text-[2rem] font-semibold pb-14 text-center">Register Now</h3>
+         <form className="px-10">
           <div>
             <input type="text"
             {...register('fullName', {required:"Name is required"})}
+            placeholder={placeholder.fullName}
+            className="border-b-2 border-gray-300 w-full focus:outline-none py-2"
             />
             {
               errors.fullName && (
@@ -50,8 +61,21 @@ export default function Enrollment() {
               )
             }
           </div>
+
+          <div>
+             
+
+
+
+          </div>
       
         </form> 
+        </div>
+
+         <div className="basis-[48%] border-l-2">
+          <LazyLoadingImage title="applicationFormVectoe" path="/ApplicationFormImage.jpg" styling="w-full h-full object-cover"/>
+           
+         </div>
 
         </div>
       </div>
