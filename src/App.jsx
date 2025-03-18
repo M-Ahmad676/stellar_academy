@@ -9,12 +9,15 @@ import Announcement from './pages/Announcement/Announcement'
 import Enrollment from './pages/EnrollPage/Enrollment'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+import Scroll_to_top_Btn from './components/Scroll_to_Top_Btn/Scroll_to_top_Btn'
 
 function App() {
 
   return (
     <>
      <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
@@ -26,6 +29,7 @@ function App() {
       </Routes>
       <Footer/>
       <CopyRightBar/>
+      <Scroll_to_top_Btn/>
      </Router>
     </>
   )
