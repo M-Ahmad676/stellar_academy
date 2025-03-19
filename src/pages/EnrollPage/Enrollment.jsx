@@ -53,7 +53,7 @@ export default function Enrollment() {
        <div className="border-2 my-12 rounded-xl flex justify-between">            
           <div className="basis-[48%] p-10">
             <h3 className="text-[2rem] font-semibold pb-14 text-center">Register Now</h3>
-         <form className="px-10">
+         <form className="px-10 space-y-10">
           <div>
             <input type="text"
             {...register('fullName', {required:"Name is required"})}
@@ -68,7 +68,8 @@ export default function Enrollment() {
           </div>
 
           <div>
-            <select {...register("gender",{required:"Gender is required"})} className="w-full">
+            <select {...register("gender",{required:"Gender is required"})} 
+            className="w-full border-b-2 border-gray-300 p-2 focus:outline-none">
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -81,7 +82,8 @@ export default function Enrollment() {
           </div>
           <div>
            <input type="email" {...register("email", {required:"Email is required"})} 
-           className="w-full border-b-2 focus:outline-none border-gray-300"/>
+           className="w-full border-b-2 focus:outline-none border-gray-300"
+           placeholder="Email Address"/>
            {
             errors.email && (
               <p>{errors.email.message}</p>
@@ -90,7 +92,8 @@ export default function Enrollment() {
           </div>
           <div>
              <input type="tel" {...register("whatsapp",{required:"WhatsApp Number is required"})}
-             className="w-full border-b-2 border-gray-300 focus:outine-none" />
+             className="w-full border-b-2 border-gray-300 focus:outine-none"
+             placeholder="WhatsApp Number" />
              {
               errors.whatsapp && (
                 <p>{errors.whatsapp.message}</p>
@@ -99,7 +102,7 @@ export default function Enrollment() {
           </div>
           <div>
             <select {...register("grade",{required:"Grade is required"})}
-            className="w-full"
+            className="w-full border-b-2 border-gray-300 p-2 focus:outline-none"
             onChange={(e) => setSelectGrade(e.target.value)}
             >
             <option value="">Select Grade</option>
@@ -114,7 +117,7 @@ export default function Enrollment() {
           </div>
 
           <div>
-            
+
           </div>
       
         </form> 
