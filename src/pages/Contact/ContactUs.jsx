@@ -47,7 +47,7 @@ export default function ContactUs() {
           email: data.email, // This is used in "Reply-To"
           message: data.message,
         },
-        "_kwzWxIi4hqGAG7GR"
+        "CQS_BYsJWAm6Hpltr"
       )
       .then(
         (response) => {

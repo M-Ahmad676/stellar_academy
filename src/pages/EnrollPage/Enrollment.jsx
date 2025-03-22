@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import HeroSection from "../../components/heroSection/HeroSection";
 import ArrowList from "../../components/ArrowList/ArrowList";
-import LazyloadingImage from '../../components/LazyLoadingImage'
 import { useForm } from "react-hook-form";
 import LazyLoadingImage from "../../components/LazyLoadingImage";
-import { option } from "framer-motion/client";
+import emailjs from '@emailjs/browser'
 
 export default function Enrollment() {
   const Instructions = [
@@ -18,15 +17,27 @@ export default function Enrollment() {
   const [placeholder, setPlaceHolder] = useState({
      
     fullName: "Full Name",
-    Gender: "Gender",
     email: "Email",
-    whatsAppNo: 'WhatsApp Number',
-    Grade: "Grade",
-    Subjects: "Enter Subjects"
+    whatsapp: 'WhatsApp Number',
   })
 
-  const [selectGrade, setSelectGrade] = useState('')
   const grades = ["9th", "10th", "11th", "12th"];
+  const [selected, setSelected] = useState({});
+
+
+  const handleFocus = (field) => {
+     setPlaceHolder((prev) => ({...prev,[field] : ""}))
+  }
+
+  const handleBlur = (field, defaultValue) => {
+    setPlaceHolder((prev) => ({...prev,[field]: defaultValue || " "}))
+  }
+
+   const handledropDownColorChange = (e, name) => {
+        
+    setSelected((prev) => ({...prev, 
+      [name]:e.target.value}))
+   }
 
   const {
     register,
@@ -35,6 +46,32 @@ export default function Enrollment() {
     watch,
     formState: {errors}, 
   } = useForm()
+
+  const onSubmit = (data) => {
+       
+     emailjs.send(
+      
+      "service_tlkyr1c",
+      "template_75haoa2",
+       {
+        fullName:data.fullName,
+        gender: data.gender,
+        email: data.email,
+        whatsapp: data.whatsapp,
+        grade: data.grade,
+       },
+       "CQS_BYsJWAm6Hpltr"
+     )
+     .then(
+     (response) => {
+      console.log("Success", response.status, response.text)
+      reset();
+     },
+      (error) => {
+       console.log("Failed .....", error )
+      }
+     )
+  }
 
   return (
     <div className="min-h-screen overflow-hidden mx-auto">
@@ -50,60 +87,77 @@ export default function Enrollment() {
           </div>
         </div>
        
-       <div className="border-2 my-12 rounded-xl flex justify-between">            
-          <div className="basis-[48%] p-10">
-            <h3 className="text-[2rem] font-semibold pb-14 text-center">Register Now</h3>
-         <form className="px-10 space-y-10">
+       <div className=" my-12 flex justify-between">            
+          <div className="basis-[50%] p-10 shadow-sm shadow-gray-400 rounded-xl">
+            <div className="mb-10">
+            <h3 className="text-[2rem] font-semibold text-center">Register Now</h3>
+            <div className="hidden sm:block w-[10rem] h-1 bg-orange-400 mx-auto rounded-full"></div> 
+            </div>
+         <form className="px-6 space-y-10" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input type="text"
             {...register('fullName', {required:"Name is required"})}
             placeholder={placeholder.fullName}
-            className="border-b-2 border-gray-300 w-full focus:outline-none py-2"
+            className="border-b-2 border-gray-300 w-full focus:outline-none px-3 py-2 bg-transparent"
+            onFocus={() => handleFocus('fullName')}
+            onBlur={() => handleBlur("fullName", "Full Name")}
             />
             {
               errors.fullName && (
-               <p>{errors.fullName.message}</p>
+               <p className="text-red-600 text-sm pt-2">{errors.fullName.message}</p>
               )
             }
           </div>
 
           <div>
             <select {...register("gender",{required:"Gender is required"})} 
-            className="w-full border-b-2 border-gray-300 p-2 focus:outline-none">
+             className={`w-full border-b-2 border-gray-300 p-2 focus:outline-none ${
+              selected.gender ? "text-black" : "text-gray-500"
+            }`}
+            onChange={(e) => handledropDownColorChange(e, "gender")}
+    
+            >
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>             
             {
               errors.gender && (
-               <p>{errors.gender.message}</p>
+               <p className="text-red-600 text-sm pt-2">{errors.gender.message}</p>
               )
             }
           </div>
           <div>
            <input type="email" {...register("email", {required:"Email is required"})} 
-           className="w-full border-b-2 focus:outline-none border-gray-300"
-           placeholder="Email Address"/>
+           className="w-full border-b-2  p-2 focus:outline-none border-gray-300"
+           placeholder={placeholder.email}
+           onBlur={() => handleBlur("email", "Email") }
+           onFocus={() => handleFocus("email")}
+           />
            {
             errors.email && (
-              <p>{errors.email.message}</p>
+              <p className="text-red-600 text-sm pt-2">{errors.email.message}</p>
             )
            }
           </div>
           <div>
              <input type="tel" {...register("whatsapp",{required:"WhatsApp Number is required"})}
-             className="w-full border-b-2 border-gray-300 focus:outine-none"
-             placeholder="WhatsApp Number" />
+             className="w-full border-b-2 p-2 border-gray-300 focus:outline-none"
+             placeholder="WhatsApp Number" 
+             onFocus={() => handleFocus("whatsapp")}
+             onBlur={() => handleBlur("whatsapp", "WhatsApp Number")}
+             />
              {
               errors.whatsapp && (
-                <p>{errors.whatsapp.message}</p>
+                <p className="text-red-600 text-sm pt-2">{errors.whatsapp.message}</p>
               )
              }
           </div>
           <div>
             <select {...register("grade",{required:"Grade is required"})}
-            className="w-full border-b-2 border-gray-300 p-2 focus:outline-none"
-            onChange={(e) => setSelectGrade(e.target.value)}
+            className={`w-full border-b-2 border-gray-300 p-2 focus:outline-none ${selected.grade ? 'text-black' : "text-gray-500"}`}
+            onChange={(e) => handledropDownColorChange(e, "grade")}
+
             >
             <option value="">Select Grade</option>
             {grades.map((grade) => (
@@ -112,20 +166,19 @@ export default function Enrollment() {
             ))}
             </select>
              {errors.grade && (
-                <p>{errors.grade.message}</p>
+                <p className="text-red-600 text-sm pt-2">{errors.grade.message}</p>
              )}
           </div>
 
-          <div>
-
-          </div>
+          <button type="submit" className="w-full bg-orange-300 my-5 text-white p-3 rounded-lg cursor-pointer hover:bg-orange-400">Submit</button>
       
         </form> 
         </div>
 
-         <div className="basis-[48%] border-l-2">
+         <div className="basis-[48%] flex justify-center items-center">
+          <div className="w-[90%]">
           <LazyLoadingImage title="applicationFormVectoe" path="/ApplicationFormImage.jpg" styling="w-full h-full object-cover"/>
-           
+          </div>
          </div>
 
         </div>
