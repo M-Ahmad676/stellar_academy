@@ -58,7 +58,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-10">
+    <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-20">
 
         <FiMenu className="block lg:hidden text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu}/>
         <SideMenu navbarLinks={navbar} sideMenu={sideMenu} />

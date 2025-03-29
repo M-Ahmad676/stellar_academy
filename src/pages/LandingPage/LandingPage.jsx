@@ -68,7 +68,7 @@ export default function LandingPage() {
           />
           <div className="flex flex-col lg:flex-row justify-between items-start gap-y-20 mt-14">
             <div className="lg:max-w-[50%] w-full space-y-12">
-                <Slide cascade={true} triggerOnce={true} duration={1000}>
+                <Slide cascade={true} triggerOnce={true} duration={800}>
                 {Methodology.map((data, index) => (
                   <div key={index} className="flex flex-col sm:flex-row items-center gap-x-4 w-full">
                     <div className="w-[6rem] lg:w-[4rem] flex-shrink-0 h-[6rem] lg:h-[4rem] rounded-full bg-orange-500 text-white shadow-md shadow-gray-400 flex items-center justify-center">
