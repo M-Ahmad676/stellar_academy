@@ -12,7 +12,7 @@ export default function Image_textSection({}) {
         title="About Us"
         path="/image2.jpg"
         styling="w-full h-full object-cover rounded-lg"
-        placeholder='/Placeholder2.jpg'
+         placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
         />
       </div>  
 

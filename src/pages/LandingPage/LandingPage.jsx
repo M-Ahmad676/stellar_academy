@@ -83,12 +83,12 @@ export default function LandingPage() {
                 </Slide>
             </div>
 
-            <div className=" hidden lg:block lg:max-w-[45%]">
+            <div className=" hidden lg:block lg:max-w-[45%] bg-gray-300 rounded-xl">
               <LazyLoadingImage
                 title="teaching methodology"
                 path="/image3.jpg"
                 styling="w-full object-cover rounded-xl "
-                placeholder='/Placeholder3.jpg'
+                 placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
               />
             </div>
           </div>

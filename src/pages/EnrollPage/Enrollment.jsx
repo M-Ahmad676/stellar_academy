@@ -34,7 +34,7 @@ export default function Enrollment() {
   };
 
   const handleBlur = (field, defaultValue) => {
-    setPlaceHolder((prev) => ({ ...prev, [field]: defaultValue || " " }));
+    setPlaceHolder((prev) => ({ ...prev, [field]: defaultValue || prev[field] }));
   };
 
   const handledropDownColorChange = (e, name) => {
