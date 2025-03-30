@@ -87,25 +87,26 @@ export default function Enrollment() {
       <HeroSection title="Application Form" />
 
       <div className="max-w-screen-xl my-20 mx-auto">
+        <div className="mx-5 2xl:mx-0">
         <div className="space-y-7">
           <h2 className="text-[1.4rem] font-medium">
             Important Instructions for Applicants
           </h2>
-          <div className="p-10 bg-orange-100 rounded-xl">
+          <div className="p-5 sm:p-10 bg-orange-100 rounded-xl">
             <ArrowList ListItems={Instructions} />
           </div>
         </div>
 
         <div className=" my-12 flex justify-between relative">
          
-          <div className="basis-[50%]">
+          <div className="basis-[100%] md:basis-[80%] lg:basis-[50%] mx-auto">
             <Fade triggerOnce={true} duration={1500} direction="left">
-              <div className="p-10 shadow-sm shadow-gray-400 rounded-xl">
+              <div className=" py-5 px-3 min-[500px]:p-5 md:p-10 shadow-sm shadow-gray-400 rounded-xl">
                 <div className="mb-10">
                   <h3 className="text-[2rem] font-semibold text-center">
                     Register Now
                   </h3>
-                  <div className="hidden sm:block w-[10rem] h-1 bg-orange-400 mx-auto rounded-full"></div>
+                  <div className="block w-[10rem] h-1 bg-orange-400 mx-auto rounded-full"></div>
                 </div>
                 <form
                   className="px-6 space-y-10"
@@ -224,7 +225,7 @@ export default function Enrollment() {
             </Fade>
           </div>
 
-          <div className="basis-[48%]">
+          <div className="basis-[48%] hidden lg:block">
             <Fade triggerOnce={true} duration={1500} direction="right">
               <div className="flex justify-center items-center">
                 <div className="w-[90%]">
@@ -238,6 +239,7 @@ export default function Enrollment() {
             </Fade>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

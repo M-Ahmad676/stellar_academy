@@ -26,7 +26,7 @@ export default function Scroll_to_top_Btn() {
     }
 
   return (
-    <div className={`w-[3rem] h-[3rem] fixed rounded-full bottom-6 right-8 bg-orange-400 flex items-center cursor-pointer justify-center transition-opacity duration-300 text-white ${ isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+    <div className={` w-[2rem] h-[2rem] text-sm sm:text-base sm:w-[3rem] sm:h-[3rem] fixed rounded-full bottom-6 right-4 sm:right-8 bg-orange-400 flex items-center cursor-pointer justify-center transition-opacity duration-300 text-white ${ isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
     onClick={scrolltoTop}
     >
     

@@ -61,7 +61,7 @@ export default function Navbar() {
     <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-20">
 
         <FiMenu className="block lg:hidden text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu}/>
-        <SideMenu navbarLinks={navbar} sideMenu={sideMenu} />
+        <SideMenu navbarLinks={navbar} sideMenu={sideMenu} setSideMenu={setSideMenu}/>
 
       <div className="max-w-[4rem] sm:max-w-[5rem] ml-16 lg:pl-0">
         <img src="/Logo.png" alt="Stellar Academy" className="w-full" />

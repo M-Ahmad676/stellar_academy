@@ -153,7 +153,7 @@ export default function AboutUs() {
             <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
           </div>
 
-          <div className="w-full pt-28 flex flex-col items-center justify-center space-y-3">
+          <div className="w-full pt-20 sm:pt-28 flex flex-col items-center justify-center space-y-3">
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[1.6rem] text-center font-semibold">Some Wise Words From our HeadMaster</h1>
             </Fade>

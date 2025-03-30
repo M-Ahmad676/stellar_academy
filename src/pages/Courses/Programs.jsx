@@ -61,11 +61,11 @@ export default function Programs() {
     <div className='overflow-hidden min-h-screen'>
       <HeroSection title="Our Programs"/>
 
-      <div className='max-w-screen-xl mx-auto my-20'>
+      <div className='max-w-screen-xl mx-auto my-20 px-5 2xl:px-0'>
         <h1 className='text-[2rem] font-medium'>Offered Programs</h1>
-      <div className='grid grid-cols-[1fr_1fr_1fr] grid-rows-3 justify-items-center gap-y-20 py-12'>
+      <div className='grid  min-[530px]:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] grid-rows-3 justify-items-normal gap-8 sm:gap-20 py-12'>
       {programsOffered.map((program,index) => (
-        <div key={index} className='max-w-[20rem] w-full h-auto rounded-lg shadow-md shadow-gray-400'>
+        <div key={index} className=' w-full h-auto rounded-lg shadow-md shadow-gray-400'>
           <div>
             <LazyLoadingImage title={program.title} path={program.image} styling="object-cover w-full rounded-lg" placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"/>
           </div>
