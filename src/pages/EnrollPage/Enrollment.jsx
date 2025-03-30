@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import LazyLoadingImage from "../../components/LazyLoadingImage";
 import BounceLoader from "react-spinners/BounceLoader";
 import { Fade } from "react-awesome-reveal";
+import Modal2 from "../../components/Modal2/Modal2";
 import emailjs from "@emailjs/browser";
 
 export default function Enrollment() {
@@ -26,6 +27,7 @@ export default function Enrollment() {
   const [selected, setSelected] = useState({});
   const [modal, setModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [messageStatus, setMessageStatus] = useState("")
 
   const handleFocus = (field) => {
     setPlaceHolder((prev) => ({ ...prev, [field]: "" }));
@@ -67,16 +69,21 @@ export default function Enrollment() {
           console.log("Success", response.status, response.text);
           setLoading(false)
           setModal(true);
+          setMessageStatus("Success")
           reset();
         },
         (error) => {
           console.log("Failed .....", error);
+          setMessageStatus("Failure")
         }
       ) .finally(()=> setLoading(false))
   };
 
   return (
-    <div className="min-h-screen overflow-hidden mx-auto">
+    <div className="min-h-screen overflow-hidden mx-auto relative">
+       {modal && (
+           <Modal2 setModal={setModal}  messageStatus={messageStatus}/>
+          )}
       <HeroSection title="Application Form" />
 
       <div className="max-w-screen-xl my-20 mx-auto">
@@ -90,20 +97,7 @@ export default function Enrollment() {
         </div>
 
         <div className=" my-12 flex justify-between relative">
-          {modal && (
-            <div className="fixed inset-0 flex items-center justify-center z-20">
-            <div className="max-w-[25rem] w-full text-center bg-white space-y-5 rounded-xl p-5 relative shadow-lg ">
-              <h3 className="font-medium text-[1.5rem]">Success!</h3>
-              <p>Your Form has been Submitted Successfully.</p>
-              <button
-                className="bg-orange-400 py-2 text-white px-5 rounded-lg cursor-pointer hover:bg-orange-500"
-                onClick={() => setModal(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-          )}
+         
           <div className="basis-[50%]">
             <Fade triggerOnce={true} duration={1500} direction="left">
               <div className="p-10 shadow-sm shadow-gray-400 rounded-xl">
@@ -145,7 +139,7 @@ export default function Enrollment() {
                       }`}
                       onChange={(e) => handledropDownColorChange(e, "gender")}
                     >
-                      <option value="" disabled hidden>Select Gender</option>
+                      <option value="">Select Gender</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                     </select>

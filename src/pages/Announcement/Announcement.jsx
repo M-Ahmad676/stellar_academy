@@ -48,10 +48,10 @@ export default function Announcement() {
 
     <div className='max-w-screen-xl mx-auto my-20'>
      {announcements.map((announcement,index) => ( 
-      <div className='flex items-center gap-x-10 bg-orange-100 rounded-xl p-5 my-5' key={index}>
+      <div className='flex items-center gap-x-6 bg-orange-100 rounded-xl p-5 my-5' key={index}>
 
         <div>
-          <IoMegaphone className='text-[3rem] text-orange-400'/>
+          <img src="/megaPhone.png" alt="loud speaker image" className='w-[5rem]'/>
         </div>
 
         <div className='space-y-2'> 

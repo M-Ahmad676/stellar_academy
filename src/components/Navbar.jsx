@@ -36,7 +36,7 @@ export default function Navbar() {
     },
     {
       label: "Programs",
-      path: "/Courses",
+      path: "/Programs",
       icon: <ImBooks/>
     },
     {

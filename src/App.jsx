@@ -4,7 +4,7 @@ import AboutUs from './pages/AboutPage/AboutUs'
 import Navbar from './components/Navbar'
 import CopyRightBar from './components/CopyRightBar/CopyRightBar'
 import ContactUs from './pages/Contact/ContactUs'
-import Courses from './pages/Courses/Courses'
+import Programs from './pages/Courses/Programs'
 import Announcement from './pages/Announcement/Announcement'
 import Enrollment from './pages/EnrollPage/Enrollment'
 import Footer from './components/Footer/Footer'
@@ -23,7 +23,7 @@ function App() {
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/ContactUs' element={<ContactUs/>}/>
-        <Route path='/Courses' element={<Courses/>}/>
+        <Route path='/Programs' element={<Programs/>}/>
         <Route path='/Announcement' element={<Announcement/>}/>
         <Route path='/Enrollment' element={<Enrollment/>}/>
       </Routes>
