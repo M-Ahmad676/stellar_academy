@@ -40,9 +40,9 @@ export default function HeroSection() {
       <div className="m-8 max-w-[25rem] w-full hidden min-[1000px]:block -z-20">
         <Image
           title="HeroSection"
-          path="/Hero.webp"
+          path="/Hero.jpg"
           styling="w-full object-cover h-full"
-          placeholder='/placeholder.webp'
+          placeholder='/placeholder.jpg'
         />
       </div>
     </div>
