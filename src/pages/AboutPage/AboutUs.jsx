@@ -31,22 +31,22 @@ export default function AboutUs() {
   const Teachers = [
     {
       Name:"Ilyas Ahmad",
-      image: '/Teachers/Teacher2.PNG',
+      image: '/Teachers/Teacher2.webp',
       Subject: "Mathematics & Statistics"
     },
     {
       Name:"Arham Gul",
-      image: '/Teachers/Teacher1.jpeg',
+      image: '/Teachers/Teacher4.webp',
       Subject: "Biology & Physics"
     },
     {
       Name:"Tabish Khizer",
-      image: '/Teachers/Teacher4.jpeg',
+      image: '/Teachers/user_placeholder.png',
       Subject: "Chemistry"
     },
     {
       Name:"Wajahat Imran",
-      image: '/Teachers/Teacher3.JPG' ,
+      image: '/Teachers/Teacher3.webp' ,
       Subject: "Computer Science"
     },
 
@@ -61,7 +61,7 @@ export default function AboutUs() {
             
             <div className="basis-[100%] min-[1400px]:basis-[50%] h-full w-full">
               <LazyLoadingImage
-                path="/image5.jpg"
+                path="/image5.webp"
                 title="Image1"
                 styling="w-full h-full object-cover rounded-lg"
               />
@@ -70,7 +70,7 @@ export default function AboutUs() {
             <div className="space-y-5 hidden min-[1400px]:block basis-[50%]">
               <div className="w-full">
                 <LazyLoadingImage
-                  path="/AboutImage3.jpg"
+                  path="/AboutImage3.webp"
                   title="Image2"
                   styling="w-full h-[20rem] object-cover rounded-lg "
                 />
@@ -78,7 +78,7 @@ export default function AboutUs() {
 
               <div className="w-full h-full">
                 <LazyLoadingImage
-                  path="/AboutImage2.jpg"
+                  path="/AboutImage2.webp"
                   title="Image3"
                   styling="w-full object-cover rounded-lg "
                 />
@@ -140,7 +140,7 @@ export default function AboutUs() {
           {/* Vision and Mission Image */}
           <div className="w-full">
             <LazyLoadingImage
-              path="/VisionMission.jpg"
+              path="/VisionMission.webp"
               title="Vision&mission"
               styling="w-full h-full object-cover rounded-lg"
             />
@@ -148,18 +148,21 @@ export default function AboutUs() {
         </div>
 
 
-        <div className="w-full bg-orange-100 rounded-xl p-10 mt-52 mb-28 relative">
+        <div className="w-full bg-orange-100 rounded-xl p-10 mt-52 mb-28 relative shadow-sm shadow-gray-400">
           <div className="w-[13rem] h-[13rem] sm:w-[15rem] sm:h-[15rem] absolute -top-30 left-1/2 -translate-x-1/2">
-            <LazyLoadingImage path="/Teachers/HeadMaster.JPG" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
+            <LazyLoadingImage path="/Teachers/user_placeholder.png" title="HeadMaster" styling="rounded-[100%] w-full h-full shadow-md shadow-gray-400 "/>
           </div>
 
-          <div className="w-full pt-20 sm:pt-28 flex flex-col items-center justify-center space-y-3">
-            <Fade direction="down" triggerOnce={true} duration={1000}>
-            <h1 className="text-[1.6rem] text-center font-semibold">Some Wise Words From our HeadMaster</h1>
+          <div className="w-full pt-20 sm:pt-28 flex flex-col items-center justify-center space-y-5">
+           <Fade direction="down" triggerOnce={true} duration={1000}>
+            <h1 className="text-[1.6rem] text-center font-semibold">Message From the Head Master</h1>
             </Fade>
-            <p>Computer scientist</p>
+            <Fade direction="down" triggerOnce={true} duration={1000}>
+            <h1 className="text-[1.3rem] text-center font-bold">Dr. Ahmed Farooq</h1>
+            </Fade>
+            <p>Head Master | Professor of Computer Science</p>
             <Fade direction="up" triggerOnce={true} duration={1000}>
-             <h3 className="text-[1.2rem] text-center font-medium italic">"Some people graduate with honors, I am just honored to graduate"</h3>
+             <h3 className="text-[0.93rem] text-center font-medium italic ">"Excellence isn’t achieved overnight, it’s earned day by day, with discipline, dedication, and the will to improve. At our center, we help you turn effort into achievement."</h3>
              </Fade>
           </div>
 
@@ -183,7 +186,7 @@ export default function AboutUs() {
              <LazyLoadingImage path={teacher.image} title={teacher.Name} styling="w-full h-full object-cover rounded-xl" />
             </div>
             <div className="h-[7rem] py-4 rounded-xl space-y-2">
-             <p className="text-[1.25rem] font-medium text-blue-500">{teacher.Name}</p>
+             <p className="text-[1.25rem] font-medium text-orange-300">{teacher.Name}</p>
              <h3 className="text-gray-600">{teacher.Subject}</h3>
             </div>
            </div>

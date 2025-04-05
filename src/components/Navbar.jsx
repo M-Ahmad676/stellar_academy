@@ -64,7 +64,7 @@ export default function Navbar() {
         <SideMenu navbarLinks={navbar} sideMenu={sideMenu} setSideMenu={setSideMenu}/>
 
       <div className="max-w-[4rem] sm:max-w-[5rem] ml-16 lg:pl-0">
-        <img src="/Logo.png" alt="Stellar Academy" className="w-full" />
+        <img src="/Logo.webp" alt="Stellar Academy" className="w-full" />
       </div>
       <ul className="hidden lg:flex gap-x-16">
         {navbar.map((navlink, index) => (

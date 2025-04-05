@@ -29,7 +29,7 @@ export default function Footer() {
       <div className="w-[1400px] max-w-full grid grid-cols-[1fr]  min-[550px]:grid-cols-[1fr_1fr]   gap-y-10 xl:grid-cols-[1.5fr_1fr_1fr_1fr] gap-x-10  place-content-center h-full">
         <div className="w-full xl:place-items-center">
           <img
-            src="/LogoTransparent.png"
+            src="/LogoTransparent.webp"
             alt="stellar academy"
             className="max-w-[7rem] w-full grayscale brightness-[1000%]"
           />

@@ -1,5 +1,4 @@
 import React from 'react'
-import SplitText from './SplitText'
 import Image from './LazyLoadingImage'
 import {Fade} from 'react-awesome-reveal'
 
@@ -10,9 +9,9 @@ export default function Image_textSection({}) {
      <div className='w-[100%] max-w-full lg:basis-[45%]'>
         <Image
         title="About Us"
-        path="/image2.jpg"
+        path="/image2.webp"
         styling="w-full h-full object-cover rounded-lg"
-         placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+         placeholder="/placeholder.png"
         />
       </div>  
 

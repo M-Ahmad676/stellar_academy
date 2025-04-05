@@ -8,7 +8,7 @@ export default function Model({message, CloseModal}) {
              { (() => {
         
               const isFailed = /Failed/i.test(message);
-              const imageSrc = isFailed ? "/Error Bot.png" : "/MailSent.png";
+              const imageSrc = isFailed ? "/Error Bot.webp" : "/MailSent.webp";
               const buttonText = isFailed ? "Try Again" : "Close";
               const textCSS = message.includes("Successfully") ? "text-orange-500 text-[1.2rem]" : "text-red-500 text-[1.2rem]";
               

@@ -157,7 +157,7 @@ export default function ContactUs() {
             </div>
             <div className="lg:basis-[50%] hidden lg:flex items-center">
               <img
-                src="/ContactUs.png"
+                src="/ContactUs.webp"
                 alt="contact Us"
                 className="rounded-r-xl object-cover w-full"
               />

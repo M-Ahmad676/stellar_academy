@@ -231,7 +231,7 @@ export default function Enrollment() {
                 <div className="w-[90%]">
                   <LazyLoadingImage
                     title="applicationFormVector"
-                    path="/ApplicationFormImage.jpg"
+                    path="/ApplicationFormImage.webp"
                     styling="w-full h-full object-cover"
                   />
                 </div>

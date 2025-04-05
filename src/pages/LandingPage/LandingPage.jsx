@@ -86,9 +86,9 @@ export default function LandingPage() {
             <div className=" hidden lg:block lg:max-w-[45%] bg-gray-300 rounded-xl">
               <LazyLoadingImage
                 title="teaching methodology"
-                path="/image3.jpg"
+                path="/image3.webp"
                 styling="w-full object-cover rounded-xl "
-                 placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                 placeholder="/placeholder.png"
               />
             </div>
           </div>

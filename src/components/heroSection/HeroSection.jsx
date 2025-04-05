@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function HeroSection({title}) {
   return (
     <div className="h-[40vh]  mx-3 sm:mx-5 xl:mx-14 text-center mt-28 flex flex-col items-center justify-center rounded-xl gap-y-5
-    bg-[url(/headerimage.jpg)] bg-bottom bg-cover bg-no-repeat shadow-sm shadow-gray-400
+    bg-[url(/headerimage.webp)] bg-bottom bg-cover bg-no-repeat shadow-sm shadow-gray-400
 
     ">
     <Fade triggerOnce={true} direction="down" duration={1000}> 

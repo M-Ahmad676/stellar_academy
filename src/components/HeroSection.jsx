@@ -5,7 +5,7 @@ import {Fade} from 'react-awesome-reveal'
 
 export default function HeroSection() {
   return (
-    <div className="bg-[url(/.jpg)] bg-contain bg-center w-full bg-no-repeat flex justify-around relative items-center h-[100vh] px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
+    <div className="bg-[url(/.webp)] bg-contain bg-center w-full bg-no-repeat flex justify-around relative items-center h-[100vh] px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
 
       <div className="w-[20rem] h-[20rem] hidden sm:block absolute rounded-full bg-orange-100 -top-32 -right-20 -z-10"> 
       </div>
@@ -40,9 +40,9 @@ export default function HeroSection() {
       <div className="m-8 max-w-[25rem] w-full hidden min-[1000px]:block -z-20">
         <Image
           title="HeroSection"
-          path="/Hero.jpg"
+          path="/Hero.webp"
           styling="w-full object-cover h-full"
-          placeholder='/placeholder.jpg'
+          placeholder='/placeholder.webp'
         />
       </div>
     </div>
