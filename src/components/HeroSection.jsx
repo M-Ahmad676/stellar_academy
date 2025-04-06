@@ -9,7 +9,7 @@ export default function HeroSection() {
 
       <div className="w-[20rem] h-[20rem] hidden sm:block absolute rounded-full bg-orange-100 -top-32 -right-20 -z-10"> 
       </div>
-      <div className="space-y-5 min-[1000px]:max-w-[35rem] w-full text-start sm:text-center min-[1000px]:!text-start">
+      <div className="space-y-5 sm:space-y-8 min-[1000px]:max-w-[35rem] w-full text-start sm:text-center min-[1000px]:!text-start">
       <Fade direction="down" triggerOnce={true}>
         <h1 className="text-[2.5rem] sm:text-[3rem] font-bold ">
           {" "}
