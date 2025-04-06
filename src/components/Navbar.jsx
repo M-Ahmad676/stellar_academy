@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { FiMenu } from "react-icons/fi"
 import { Link, useLocation } from "react-router-dom";
@@ -15,12 +15,31 @@ export default function Navbar() {
   const location = useLocation()
   const [sideMenu, setSideMenu] = useState(false)
   const navigate = useNavigate()
-   
+  const menuRef = useRef(null) 
+  const menuIconRef = useRef(null)
+
   const ToggleSideMenu = () => {
       
     setSideMenu(!sideMenu)
 
   }
+
+  useEffect(() => {
+
+    const handleOutsiteClick = (event) => {
+       
+      if(menuRef.current && !menuRef.current.contains(event.target) && menuIconRef.current && !menuIconRef.current.contains(event.target)){
+        setSideMenu(false)
+      }
+    }
+     
+    if(sideMenu){
+      document.addEventListener("mousedown", handleOutsiteClick)
+    }
+    
+    return(() => document.removeEventListener("mousedown", handleOutsiteClick))
+ 
+  },[sideMenu])
 
   const handleApplyNow = () => {
 
@@ -59,11 +78,12 @@ export default function Navbar() {
 
   return (
     <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-20">
+        <div ref={menuIconRef}>
+        <FiMenu className="block lg:hidden text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu} />
+        </div>
+        <SideMenu navbarLinks={navbar} sideMenu={sideMenu} setSideMenu={setSideMenu} menuRef={menuRef}/>
 
-        <FiMenu className="block lg:hidden text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu}/>
-        <SideMenu navbarLinks={navbar} sideMenu={sideMenu} setSideMenu={setSideMenu}/>
-
-      <div className="max-w-[4rem] sm:max-w-[5rem] ml-16 lg:pl-0">
+      <div className="max-w-[4rem] sm:max-w-[5rem] ml-13 lg:pl-0">
         <img src="/Logo.webp" alt="Stellar Academy" className="w-full" />
       </div>
       <ul className="hidden lg:flex gap-x-16">

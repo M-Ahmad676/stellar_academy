@@ -1,11 +1,11 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-export default function SideMenu({ navbarLinks, sideMenu, setSideMenu }) {
+export default function SideMenu({ navbarLinks, sideMenu, setSideMenu, menuRef }) {
 
   const location = useLocation()
-  const menuRef = useRef(null)
+
 
   useEffect(() => {
 
@@ -14,22 +14,7 @@ export default function SideMenu({ navbarLinks, sideMenu, setSideMenu }) {
   },[location.pathname])
 
 
-  useEffect(() => {
-
-    const handleOutsiteClick = (event) => {
-       
-      if(menuRef.current && !menuRef.current.contains(event.target)){
-        setSideMenu(false)
-      }
-    }
-     
-    if(sideMenu){
-      document.addEventListener("mousedown", handleOutsiteClick)
-    }
-    
-    return(() => document.removeEventListener("mousedown", handleOutsiteClick))
  
-  },[sideMenu])
 
   return (
     <div
@@ -40,13 +25,14 @@ export default function SideMenu({ navbarLinks, sideMenu, setSideMenu }) {
     >
       <ul className="w-full h-full py-5">
         {navbarLinks.map((links, index) => (
-          <li
+          <Link
             key={index}
-            className="mx-2 rounded-xl p-5 hover:bg-[#86c1ff2a] flex items-center gap-x-4 "
+            to={links.path}
+            className={`mx-2 rounded-xl p-5 flex items-center gap-x-4 ${location.pathname === links.path ? "bg-[#86c1ff2a]":"hover:bg-[#86c1ff2a]"} `}
           >
             <span className="text-[1.3rem] text-gray-600">{links.icon}</span>
-            <Link to={links.path}>{links.label}</Link>
-          </li>
+            {links.label}
+          </Link>
         ))}
       </ul>
     </div>

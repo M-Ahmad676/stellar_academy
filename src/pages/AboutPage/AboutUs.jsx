@@ -160,7 +160,7 @@ export default function AboutUs() {
             <Fade direction="down" triggerOnce={true} duration={1000}>
             <h1 className="text-[1.3rem] text-center font-bold">Dr. Ahmed Farooq</h1>
             </Fade>
-            <p>Head Master | Professor of Computer Science</p>
+            <p className="text-center">Head Master | Professor of Computer Science</p>
             <Fade direction="up" triggerOnce={true} duration={1000}>
              <h3 className="text-[0.93rem] text-center font-medium italic ">"Excellence isn’t achieved overnight, it’s earned day by day, with discipline, dedication, and the will to improve. At our center, we help you turn effort into achievement."</h3>
              </Fade>

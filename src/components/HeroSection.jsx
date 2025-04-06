@@ -5,13 +5,13 @@ import {Fade} from 'react-awesome-reveal'
 
 export default function HeroSection() {
   return (
-    <div className="bg-[url(/.webp)] bg-contain bg-center w-full bg-no-repeat flex justify-around relative items-center h-[100vh] px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
+    <div className="bg-[url(/.webp)] bg-contain bg-center w-full bg-no-repeat flex justify-around relative items-center min-h-screen px-4 sm:px-10 mt-20 sm:mt-10 min-[1000px]:my-0">
 
       <div className="w-[20rem] h-[20rem] hidden sm:block absolute rounded-full bg-orange-100 -top-32 -right-20 -z-10"> 
       </div>
       <div className="space-y-5 min-[1000px]:max-w-[35rem] w-full text-start sm:text-center min-[1000px]:!text-start">
       <Fade direction="down" triggerOnce={true}>
-        <h1 className="text-[2.5rem] sm:text-[3rem] font-bold">
+        <h1 className="text-[2.5rem] sm:text-[3rem] font-bold ">
           {" "}
           Unlock Your   
           <SplitText
