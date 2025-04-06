@@ -78,8 +78,8 @@ export default function Navbar() {
 
   return (
     <nav className="w-full fixed flex justify-between px-4 min-[500px]:px-10 h-[5rem] items-center bg-white shadow-sm shadow-gray-400 z-20">
-        <div ref={menuIconRef}>
-        <FiMenu className="block lg:hidden text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu} />
+        <div ref={menuIconRef} className="block lg:hidden">
+        <FiMenu className="text-[1.8rem] sm:text-[2rem]" onClick={ToggleSideMenu} />
         </div>
         <SideMenu navbarLinks={navbar} sideMenu={sideMenu} setSideMenu={setSideMenu} menuRef={menuRef}/>
 
